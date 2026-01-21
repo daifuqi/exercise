@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>判断题模板</title>
+    <title>PPT判断题</title>
     <link href="panduanstyle.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
@@ -15,7 +15,7 @@
 
     <!-- 中间答题容器 -->
     <div class="container">
-        <h1>判断题闯关挑战（交互式完整版）</h1>
+        <h1>PPT判断题</h1>
         <a style="display: inline-block;align-items: center;justify-content: center;width: 80;height: 80;border: 3px solid #e5e7eb; border-radius: 6px;background-color: #ffffff; color: #374151;" href="index.html">返回主页</a>
         <!-- 答题进度 -->
         <div class="question-progress" id="questionProgress">当前：第1题 / 共15题</div>
@@ -24,8 +24,7 @@
         <div class="question-list" id="questionList">
             <!-- 题目1 -->
             <div class="question-card" data-question-id="1">
-                <div class="question-title">1.在Word2010中，给段落添加项目符号，可以通过“插入”选项卡→“符号”→“其他符号”来实现。(  )</div>
-                <img src="images/word_judge_question_1.png" alt="" class="question-img" style="width: 160px;">
+                <div class="question-title">1.在制作多媒体作品时，可以随意引用他人的作品，只需要注明出处等信息就不会侵权。（）</div>
                 <div class="judge-options">
                     <div class="judge-item">
                         <input type="radio" name="q1" value="对" id="q1a">
@@ -36,18 +35,17 @@
                         <label for="q1b">错</label>
                     </div>
                 </div>
-                <div class="answer-info" style="display: none;" data-correct-answer="对">
-                    解析：Word 2010、2013、2016等版本的默认保存格式为.docx，而Word 2003及以下版本的默认保存格式为.doc。
+                <div class="answer-info" style="display:none;" data-correct-answer="错">
+                    在制作多媒体作品时，即便注明出处，也不能随意引用他人作品。引用行为需符合法律规定的“合理使用”范围，否则仍可能构成侵权。例如，引用的目的、引用的比例、对原作品市场的影响等因素都需要考虑。所以该说法错误。
                 </div>
                 <div class="analysis-area" id="analysis1">
                     <div class="analysis-title">答题解析</div>
                     <div class="analysis-content" id="analysisContent1"></div>
                 </div>
             </div>
-
             <!-- 题目2 -->
             <div class="question-card" data-question-id="2">
-                <div class="question-title">2.在Word2010中，要完成内容的剪切、复制、粘贴等操作，除了可以使用快捷键外，还可以使用“开始”选项卡中对应的命令。</div>
+                <div class="question-title">2.在PowerPoint中插入一个视频文件，在播放时只想保留视频的中间部分，可以使用命令对视频进行剪裁。（）</div>
                 <div class="judge-options">
                     <div class="judge-item">
                         <input type="radio" name="q2" value="对" id="q2a">
@@ -58,8 +56,8 @@
                         <label for="q2b">错</label>
                     </div>
                 </div>
-                <div class="answer-info" style="display: none;" data-correct-answer="对">
-                    在Word2010软件操作中，“开始”选项卡集成了常用的文本编辑命令，其中就包含剪切、复制、粘贴功能，同时用户也可使用如Ctrl+X（剪切）、Ctrl+C（复制）、Ctrl+V（粘贴）等快捷键完成相同操作，所以该说法正确。
+                <div class="answer-info" style="display:none;" data-correct-answer="对">
+                    在PowerPoint中，当插入视频文件后，软件提供了视频剪裁功能。通过该功能，用户能够设置视频的开始时间和结束时间，从而实现只保留视频中间部分在播放时展示，所以该说法正确。
                 </div>
                 <div class="analysis-area" id="analysis2">
                     <div class="analysis-title">答题解析</div>
@@ -69,7 +67,7 @@
 
             <!-- 题目3 -->
             <div class="question-card" data-question-id="3">
-                <div class="question-title">3.在Word2010中编辑文档时，要找回误删的文字或图片，可以打开回收站，选定要恢复的内容，执行“还原选定的项目”来恢复文字或图片。</div>
+                <div class="question-title">3.在PowerPoint中，可以对插入的音频进行简单的编辑，如进行“淡入”“淡出”的设置。（）</div>
                 <div class="judge-options">
                     <div class="judge-item">
                         <input type="radio" name="q3" value="对" id="q3a">
@@ -80,8 +78,8 @@
                         <label for="q3b">错</label>
                     </div>
                 </div>
-                <div class="answer-info" style="display:none;" data-correct-answer="错">
-                    在Word2010编辑文档时，误删的文字或图片并不会进入计算机的回收站。通常可使用Word自身的撤销功能（快捷键Ctrl + Z）来找回误删内容 ，所以该说法错误。
+                <div class="answer-info" style="display:none;" data-correct-answer="对">
+                    在PowerPoint中，选中插入的音频对象后，在音频工具的“播放”选项卡中，有专门针对音频播放效果的设置区域，其中就包含“淡入”和“淡出”的时长设置功能，能够实现让音频以淡入、淡出的效果播放，所以该说法正确。
                 </div>
                 <div class="analysis-area" id="analysis3">
                     <div class="analysis-title">答题解析</div>
@@ -90,9 +88,8 @@
             </div>
 
             <!-- 题目4 -->
-            <div class="question-card" data-question-id="4">
-                <div class="question-title">4.陈老师想将几位同学编写的介绍丽江景点的文档汇总成一个文档，最便捷的方法是使用word的文件合并功能。</div>
-                <img src="images/word_judge_question_4.png" alt="" class="question-img" style="width:200px;">
+             <div class="question-card" data-question-id="4">
+                <div class="question-title">4.PowerPoint的幻灯片主题只可以应用于所有幻灯片。（）</div>
                 <div class="judge-options">
                     <div class="judge-item">
                         <input type="radio" name="q4" value="对" id="q4a">
@@ -103,8 +100,8 @@
                         <label for="q4b">错</label>
                     </div>
                 </div>
-                <div class="answer-info" style="display:none;" data-correct-answer="对">
-                    在Word中，文件合并功能能够将多个文档内容整合到一个文档中，相比手动复制粘贴等方式，极大提高了汇总效率，是将多个文档汇总的便捷方法。
+                <div class="answer-info" style="display:none;" data-correct-answer="错">
+                    在PowerPoint中，幻灯片主题不仅可以应用于所有幻灯片，还可以应用于选定的部分幻灯片。操作时，先选中想要应用主题的幻灯片（可多张），然后右键单击要应用的主题，在弹出的菜单中选择“应用于选定幻灯片”，即可实现部分幻灯片应用特定主题。所以该说法错误。
                 </div>
                 <div class="analysis-area" id="analysis4">
                     <div class="analysis-title">答题解析</div>
@@ -113,7 +110,8 @@
             </div>
             <!-- 题目5 -->
             <div class="question-card" data-question-id="5">
-                <div class="question-title">5.在Word2010中，编辑文档时可以使用书签链接来打开引用的外部链接文件。</div>
+                <div class="question-title">5.在PowerPoint2010中新增如下图所示的版式的幻灯片，在幻灯片浏览视图中看到的幻灯片界面也如图所示。（）</div>
+                <img src="images/ppt_judge_question_5.png" alt="" class="question-img" style="width: 260px;">
                 <div class="judge-options">
                     <div class="judge-item">
                         <input type="radio" name="q5" value="对" id="q5a">
@@ -124,18 +122,19 @@
                         <label for="q5b">错</label>
                     </div>
                 </div>
-                <div class="answer-info" style="display:none;" data-correct-answer="错">
-                    在Word2010中，书签主要用于在文档内部创建定位标记，方便在文档内快速跳转，不能直接用于打开引用的外部链接文件。若要打开外部链接文件，通常使用超链接功能。所以该说法错误。
+                <div class="answer-info" style="display: none;" data-correct-answer="错">
+                    在PowerPoint 2010中，幻灯片浏览视图以缩略图形式展示幻灯片，主要用于快速查看和整理幻灯片顺序。虽然幻灯片版式决定了内容布局，但在幻灯片浏览视图下，为了适应整体展示，其显示效果如字体大小、元素比例等可能与普通视图有所不同，不会完全等同于普通视图下看到的界面。所以该说法错误。
                 </div>
                 <div class="analysis-area" id="analysis5">
                     <div class="analysis-title">答题解析</div>
                     <div class="analysis-content" id="analysisContent5"></div>
                 </div>
             </div>
+
             <!-- 题目6 -->
             <div class="question-card" data-question-id="6">
-                <div class="question-title">6.如图所示，在“页面设置”对话框中，若将纸张方向设置为“横向”，此时文档的上下页边距是5.08厘米，左右页边距是2.54厘米。(  )</div>
-                <img src="images/word_judge_question_6.png" alt="" class="question-img" style="width:260px;">
+                <div class="question-title">6.如下图所示的PowerPoint2010幻灯片视图中，可以新增、删除幻灯片。（）</div>
+                <img src="images/ppt_judge_question_6.png" alt="" class="question-img" style="width: 260px;">
                 <div class="judge-options">
                     <div class="judge-item">
                         <input type="radio" name="q6" value="对" id="q6a">
@@ -146,8 +145,8 @@
                         <label for="q6b">错</label>
                     </div>
                 </div>
-                <div class="answer-info" style="display:none;" data-correct-answer="错">
-                    已知原来上下页边距是2.54厘米，左右页边距是5.08厘米 ，当纸张方向设置为“横向”后，上下和左右页边距概念互换，但数值并不会自动改变，所以此时文档的上下页边距应是2.54厘米，左右页边距应是5.08厘米，而题目表述与之不符，故该说法错误。
+                <div class="answer-info" style="display: none;" data-correct-answer="对">
+                    在PowerPoint 2010的大多数幻灯片视图（如普通视图、幻灯片浏览视图等）中，都提供了新增和删除幻灯片的功能按钮或操作方式。例如在普通视图的左侧幻灯片缩略图区域，可通过右键菜单进行新增或删除操作；在幻灯片浏览视图中，同样可以方便地执行这些操作。所以该说法正确。
                 </div>
                 <div class="analysis-area" id="analysis6">
                     <div class="analysis-title">答题解析</div>
@@ -156,8 +155,8 @@
             </div>
             <!-- 题目7 -->
             <div class="question-card" data-question-id="7">
-                <div class="question-title">7.在word中，要将多个文档合并为一个文档，可以通过“邮件”选项卡→“开始邮件合并”组→“开始邮件合并”下的“普通word文档”命令来实现。(  )</div>
-                <img src="images/word_judge_question_7.png" alt="" class="question-img" style="width:300px;">
+                <div class="question-title">7.在PowerPoint2010中，可以通过“设计 - 主题”的相关命令更改幻灯片的主题。（）</div>
+                <img src="images/ppt_judge_question_7.png" alt="" class="question-img" style="width: 260px;">
                 <div class="judge-options">
                     <div class="judge-item">
                         <input type="radio" name="q7" value="对" id="q7a">
@@ -168,17 +167,19 @@
                         <label for="q7b">错</label>
                     </div>
                 </div>
-                <div class="answer-info" style="display:none;" data-correct-answer="错">
-                    在Word中，“邮件”选项卡下的“开始邮件合并”相关功能主要用于批量生成文档，如批量生成邀请函、信封等，并非用于将多个文档合并为一个文档。通常合并多个Word文档，可以使用“插入”选项卡中的“对象”功能，选择“文件中的文字”来实现。所以题目中的说法是错误的。
+                <div class="answer-info" style="display: none;" data-correct-answer="对">
+                    在PowerPoint2010软件界面中，“设计”选项卡下包含众多关于幻灯片主题的设置命令。通过这些命令，用户能够轻松选择不同的主题，从而快速更改整个演示文稿或特定幻灯片的外观风格，包括颜色、字体、效果等元素。所以该说法正确。
                 </div>
                 <div class="analysis-area" id="analysis7">
                     <div class="analysis-title">答题解析</div>
                     <div class="analysis-content" id="analysisContent7"></div>
                 </div>
             </div>
-            <!--题目8-->
+
+            <!-- 题目8 -->
             <div class="question-card" data-question-id="8">
-                <div class="question-title">8.书籍一般由图片、文字、日期、价格等构成。(  )</div>
+                <div class="question-title">8.如图所示，在PowerPoint2010的幻灯片浏览视图中，拖动幻灯片可以调整幻灯片播放顺序。（）</div>
+                <img src="images/ppt_judge_question_8.png" alt="" class="question-img" style="width: 260px;">
                 <div class="judge-options">
                     <div class="judge-item">
                         <input type="radio" name="q8" value="对" id="q8a">
@@ -189,17 +190,18 @@
                         <label for="q8b">错</label>
                     </div>
                 </div>
-                <div class="answer-info" style="display:none;" data-correct-answer="错">
-                    书籍一般主要由文字和图片构成，日期和价格并非构成书籍的必要元素。日期通常用于记录书籍出版时间等信息，价格是书籍在市场流通中的定价，它们不属于书籍本身构成的范畴。所以该说法错误。
+                <div class="answer-info" style="display: none;" data-correct-answer="对">
+                    在PowerPoint2010的幻灯片浏览视图下，用户能够直观地看到所有幻灯片的缩略图。通过鼠标拖动幻灯片缩略图，即可轻松改变幻灯片的排列顺序，而幻灯片的播放顺序与排列顺序相关，所以拖动幻灯片能够调整其播放顺序。因此，该说法正确。
                 </div>
                 <div class="analysis-area" id="analysis8">
                     <div class="analysis-title">答题解析</div>
                     <div class="analysis-content" id="analysisContent8"></div>
                 </div>
             </div>
-            <!--题目9-->
+            <!-- 题目9 -->
             <div class="question-card" data-question-id="9">
-                <div class="question-title">9.在Word2010中，要将(1011)2设置成(1011)₂，可以使用“开始”选项卡“字体”组中的“x₂”按钮来实现。(  )</div>
+                <div class="question-title">9.在PowerPoint2010中，要去除左图中的黄色背景得到右图效果，只能使用“图片工具 - 格式”下的“删除背景”命令来实现。（）</div>
+                <img src="images/ppt_judge_question_9.png" alt="" class="question-img" style="width: 260px;">
                 <div class="judge-options">
                     <div class="judge-item">
                         <input type="radio" name="q9" value="对" id="q9a">
@@ -210,17 +212,18 @@
                         <label for="q9b">错</label>
                     </div>
                 </div>
-                <div class="answer-info" style="display:none;" data-correct-answer="对">
-                    在Word2010里，“开始”选项卡“字体”组中的“x₂”按钮为下标按钮。通过选中数字2，再点击该“x₂”按钮，能够将(1011)2设置为(1011)₂ ，所以此说法正确。
+                <div class="answer-info" style="display: none;" data-correct-answer="错">
+                    在PowerPoint2010中，要去除图片背景，除了使用“图片工具 - 格式”下的“删除背景”命令外，还可以通过设置图片的透明色（若背景颜色单一）来达到类似效果。此外，借助一些外部图像编辑软件先处理好图片，再插入到PowerPoint中，也能实现去除背景的目的。所以该说法错误。
                 </div>
                 <div class="analysis-area" id="analysis9">
                     <div class="analysis-title">答题解析</div>
                     <div class="analysis-content" id="analysisContent9"></div>
                 </div>
             </div>
-            <!--题目10-->
+            <!-- 题目10 -->
             <div class="question-card" data-question-id="10">
-                <div class="question-title">10.文字处理的应用价值在于突出个性，增加视觉冲击力，让文档具有艺术性视觉效果。(  )</div>
+                <div class="question-title">10. 在PowerPoint2010中，插入音频文件后可以通过“剪裁音频”按钮对音频进行裁剪，保留音频合适的部分作为幻灯片的背景音乐。（）</div>
+                <img src="images/ppt_judge_question_10.png" alt="" class="question-img" style="width: 260px;">
                 <div class="judge-options">
                     <div class="judge-item">
                         <input type="radio" name="q10" value="对" id="q10a">
@@ -231,17 +234,17 @@
                         <label for="q10b">错</label>
                     </div>
                 </div>
-                <div class="answer-info" style="display:none;" data-correct-answer="错">
-                    文字处理的应用价值是多方面的，虽然突出个性、增加视觉冲击力以及赋予文档艺术性视觉效果是其中一部分，但文字处理更重要的价值在于准确清晰地传达信息、提高文档编辑和排版效率、满足不同场景（如商务办公、学术写作等）的文档需求等。所以该说法过于片面，是错误的。
+                <div class="answer-info" style="display: none;" data-correct-answer="对">
+                    在PowerPoint2010里，插入音频后，在“音频工具 - 播放”选项卡中具备“剪裁音频”按钮。通过此按钮，能够精准设置音频的起始与结束时间，实现对音频的裁剪操作，进而选取合适的音频片段作为幻灯片的背景音乐。所以该表述正确。
                 </div>
                 <div class="analysis-area" id="analysis10">
                     <div class="analysis-title">答题解析</div>
                     <div class="analysis-content" id="analysisContent10"></div>
                 </div>
             </div>
-            <!--题目11-->
+            <!-- 题目11 -->
             <div class="question-card" data-question-id="11">
-                <div class="question-title">11.在Word2010中，通过插入页码可以实现在文档每页的底部显示日期或者作者等信息。(  )</div>
+                <div class="question-title">11.在PowerPoint2010中，要将某对象的动画效果应用给其它对象，可以使用<img src="images/ppt_judge_question_11.png" alt="" class="question-img-option">快速实现，减少幻灯片编辑时的重复工作。（）</div>
                 <div class="judge-options">
                     <div class="judge-item">
                         <input type="radio" name="q11" value="对" id="q11a">
@@ -252,17 +255,18 @@
                         <label for="q11b">错</label>
                     </div>
                 </div>
-                <div class="answer-info" style="display:none;" data-correct-answer="错">
-                    在Word2010中，插入页码的主要功能是在文档页面上添加页号。若要在文档每页底部显示日期或作者等信息，通常需要通过插入页眉页脚功能，并在页脚区域手动插入日期域、作者信息等，而不是通过插入页码来实现。所以该说法错误。
+                <div class="answer-info" style="display: none;" data-correct-answer="错">
+                    在PowerPoint2010中，将某对象的动画效果应用给其他对象，使用的是“动画刷” ，而非“格式刷”。“格式刷”主要用于复制文本格式、段落格式等，不能复制动画效果。所以该说法错误。
                 </div>
                 <div class="analysis-area" id="analysis11">
                     <div class="analysis-title">答题解析</div>
                     <div class="analysis-content" id="analysisContent11"></div>
                 </div>
             </div>
-            <!--题目12-->
+            <!-- 题目12 -->
             <div class="question-card" data-question-id="12">
-                <div class="question-title">12.在Word2010中，版面编排需要突出主题，版面中各个元素需要合理搭配。(  )</div>
+                <div class="question-title">12. 如下图所示的PowerPoint2010幻灯片视图中，可以调整幻灯片的放映顺序。（）</div>
+                <img src="images/ppt_judge_question_12.png" alt="" class="question-img" style="width: 260px;">
                 <div class="judge-options">
                     <div class="judge-item">
                         <input type="radio" name="q12" value="对" id="q12a">
@@ -273,17 +277,18 @@
                         <label for="q12b">错</label>
                     </div>
                 </div>
-                <div class="answer-info" style="display:none;" data-correct-answer="对">
-                    在Word2010进行版面编排时，突出主题能让文档核心内容更清晰传达，而合理搭配各个元素，如文字、图片、图表等，可提升文档整体的美观度与可读性，所以该说法正确。
+                <div class="answer-info" style="display: none;" data-correct-answer="对">
+                    在PowerPoint 2010常见的幻灯片视图，如普通视图、幻灯片浏览视图等，都提供了调整幻灯片顺序的功能。在幻灯片浏览视图中，可直接通过鼠标拖动幻灯片缩略图改变顺序；在普通视图左侧的幻灯片缩略图窗格，也能通过相应操作调整顺序，进而改变幻灯片的放映顺序。所以该说法正确。
                 </div>
                 <div class="analysis-area" id="analysis12">
                     <div class="analysis-title">答题解析</div>
                     <div class="analysis-content" id="analysisContent12"></div>
                 </div>
             </div>
-            <!--题目13-->
+            <!-- 题目13 -->
             <div class="question-card" data-question-id="13">
-                <div class="question-title">13.在Word中，可以使用Shift键将当前的“改写”状态转换成“插入”状态。(  )</div>
+                <div class="question-title">13. 在PowerPoint中编辑下图所示的幻灯片时，从图中可以看出给这张幻灯片的内容添加了两个动画效果。（）</div>
+                <img src="images/ppt_judge_question_13.png" alt="" class="question-img" style="width: 260px;">
                 <div class="judge-options">
                     <div class="judge-item">
                         <input type="radio" name="q13" value="对" id="q13a">
@@ -294,18 +299,18 @@
                         <label for="q13b">错</label>
                     </div>
                 </div>
-                <div class="answer-info" style="display:none;" data-correct-answer="错">
-                    在Word中，通常是通过双击状态栏中的“改写”按钮，或者按键盘上的Insert键来实现“改写”状态与“插入”状态的转换，并非使用Shift键。所以该说法错误。
+                <div class="answer-info" style="display: none;" data-correct-answer="对">
+                    从提供的幻灯片图中能够直观地观察到，幻灯片内容存在明显不同的呈现方式或变化顺序，这表明添加了多个动画效果，经判断为两个动画效果。所以该说法正确。
                 </div>
                 <div class="analysis-area" id="analysis13">
                     <div class="analysis-title">答题解析</div>
                     <div class="analysis-content" id="analysisContent13"></div>
                 </div>
             </div>
-
-            <!--题目14-->
+            <!-- 题目14 -->
             <div class="question-card" data-question-id="14">
-                <div class="question-title">14.在Word中，页眉和页脚内容不能修改。(  )</div>
+                <div class="question-title">14.在PowerPoint2010中所有幻灯片的切换设置如下图所示当幻灯片放映时切换幻灯片会有“打字机”的声音播放。（）</div>
+                <img src="images/ppt_judge_question_14.png" alt="" class="question-img" style="width:260px;">
                 <div class="judge-options">
                     <div class="judge-item">
                         <input type="radio" name="q14" value="对" id="q14a">
@@ -316,18 +321,17 @@
                         <label for="q14b">错</label>
                     </div>
                 </div>
-                <div class="answer-info" style="display:none;" data-correct-answer="错">
-                    在Word中，用户只需双击页眉或页脚区域，即可进入编辑状态对页眉和页脚内容进行修改，包括文字、格式、页码等各种元素。所以“页眉和页脚内容不能修改”这一说法错误。
+                <div class="answer-info" style="display:none;" data-correct-answer="对">
+                    在PowerPoint2010里如果幻灯片切换设置中明确指定了切换声音为“打字机”声音那么在幻灯片放映时当进行幻灯片切换操作就会按照设置播放“打字机”声音。所以该说法正确。
                 </div>
                 <div class="analysis-area" id="analysis14">
                     <div class="analysis-title">答题解析</div>
                     <div class="analysis-content" id="analysisContent14"></div>
                 </div>
             </div>
-
-            <!--题目15-->
+            <!-- 题目15 -->
             <div class="question-card" data-question-id="15">
-                <div class="question-title">15.在Word2010中，要粘贴已经复制好的内容，可以使用“<img src="images/word_judge_question_15.png" alt="" class="question-img-option">”命令。(  )</div>
+                <div class="question-title">15.在PowerPoint2010演示文稿中可以给图片设置“推进”的切换效果。（）</div>
                 <div class="judge-options">
                     <div class="judge-item">
                         <input type="radio" name="q15" value="对" id="q15a">
@@ -338,18 +342,17 @@
                         <label for="q15b">错</label>
                     </div>
                 </div>
-                <div class="answer-info" style="display:none;" data-correct-answer="对">
-                    在Word2010中，当内容复制好后，确实可以通过“粘贴”命令来实现粘贴操作。常见的方式有在“开始”选项卡中找到“粘贴”按钮点击，或者右键菜单中选择“粘贴”，所以该说法正确。
+                <div class="answer-info" style="display:none;" data-correct-answer="错">
+                    在PowerPoint2010中切换效果是针对幻灯片之间的过渡设置并非针对单张幻灯片内的图片。图片可设置的是动画效果如进入、强调、退出等效果其中并无“推进”这种切换效果说法。所以该说法错误。
                 </div>
                 <div class="analysis-area" id="analysis15">
                     <div class="analysis-title">答题解析</div>
                     <div class="analysis-content" id="analysisContent15"></div>
                 </div>
             </div>
-
-            <!--题目16-->
+            <!-- 题目16 -->
             <div class="question-card" data-question-id="16">
-                <div class="question-title">16.在Word中，插入的页码格式可以是“甲、乙、丙…”。(  )</div>
+                <div class="question-title">16.在PowerPoint放映幻灯片时为了让幻灯片上的文字呈现从上往下逐行出现的效果可以对其设置"进入"类型的动画效果。（）</div>
                 <div class="judge-options">
                     <div class="judge-item">
                         <input type="radio" name="q16" value="对" id="q16a">
@@ -361,16 +364,16 @@
                     </div>
                 </div>
                 <div class="answer-info" style="display:none;" data-correct-answer="对">
-                    在Word中，通过“插入”选项卡找到“页码”功能，在设置页码格式时，“编号格式”里提供了多种选择，其中就包括“甲，乙，丙，…”这种格式。所以在Word中插入的页码格式可以是“甲、乙、丙…”，该说法正确。
+                    在PowerPoint中通过对文字设置“进入”类型动画效果，并合理调整动画的开始方式、方向及序列等参数能够实现文字从上往下逐行出现的效果满足在幻灯片放映时特定的展示需求。所以该说法正确。
                 </div>
                 <div class="analysis-area" id="analysis16">
                     <div class="analysis-title">答题解析</div>
                     <div class="analysis-content" id="analysisContent16"></div>
                 </div>
             </div>
-            <!--题目17-->
+            <!-- 题目17 -->
             <div class="question-card" data-question-id="17">
-                <div class="question-title">17.在Word的“页面布局”选项卡→“页面设置”组中可以设置页面颜色。(  )</div>
+                <div class="question-title">17.在PowerPoint2010中在幻灯片放映时鼠标指向有超链接的地方时鼠标指针将变为<img src="images/ppt_judge_question_17.png" alt="" class="question-img-option">形状。（）</div>
                 <div class="judge-options">
                     <div class="judge-item">
                         <input type="radio" name="q17" value="对" id="q17a">
@@ -382,17 +385,16 @@
                     </div>
                 </div>
                 <div class="answer-info" style="display:none;" data-correct-answer="错">
-                    在Word中，设置页面颜色通常是在“页面布局”选项卡中的“页面背景”组里，通过点击“页面颜色”按钮来进行操作，并非在“页面设置”组中。所以该说法错误。
+                    在PowerPoint2010幻灯片放映时鼠标指向超链接处指针通常变为手形并非四向箭头形状。所以该说法错误。
                 </div>
                 <div class="analysis-area" id="analysis17">
                     <div class="analysis-title">答题解析</div>
                     <div class="analysis-content" id="analysisContent17"></div>
                 </div>
             </div>
-            <!--题目18-->
+            <!-- 题目18 -->
             <div class="question-card" data-question-id="18">
-                <div class="question-title">18.在Word中，输入法的当前状态如图所示，此时输入句号，显示的是“.”。(  )</div>
-                <img src="images/word_judge_question_18.png" alt="" class="question-img">
+                <div class="question-title">18.在PowerPoint2010中幻灯片放映时通过鼠标只能按顺序切换幻灯片。（）</div>
                 <div class="judge-options">
                     <div class="judge-item">
                         <input type="radio" name="q18" value="对" id="q18a">
@@ -404,16 +406,16 @@
                     </div>
                 </div>
                 <div class="answer-info" style="display:none;" data-correct-answer="错">
-                    在Word2010中，若输入法处于中文标点状态，输入句号显示的是“。”；若处于英文标点状态，输入句号显示的才是“.” 。所以根据图片可判断输入显示应该是“。”，该说法错误。
+                    在PowerPoint2010幻灯片放映时，除了通过鼠标单击按顺序切换幻灯片外，还可通过右键菜单选择特定幻灯片进行跳转，并不局限于按顺序切换。所以该说法错误。
                 </div>
                 <div class="analysis-area" id="analysis18">
                     <div class="analysis-title">答题解析</div>
                     <div class="analysis-content" id="analysisContent18"></div>
                 </div>
             </div>
-            <!--题目19-->
+            <!-- 题目19 -->
             <div class="question-card" data-question-id="19">
-                <div class="question-title">19.在Word2010中，插入的超链接可以链接到网页地址，不能链接外部文件。(  )</div>
+                <div class="question-title">19.在PowerPoint中一个对象可以添加多个动画效果。（）</div>
                 <div class="judge-options">
                     <div class="judge-item">
                         <input type="radio" name="q19" value="对" id="q19a">
@@ -424,18 +426,78 @@
                         <label for="q19b">错</label>
                     </div>
                 </div>
-                <div class="answer-info" style="display:none;" data-correct-answer="错">
-                    在Word2010中，插入超链接时，不仅可以链接到网页地址（URL），还能链接到外部文件，如其他Word文档、Excel表格、PDF文件等。操作时，在“插入超链接”对话框中，通过选择“现有文件或网页”，即可定位并选择本地的外部文件进行链接。所以该说法错误。
+                <div class="answer-info" style="display:none;" data-correct-answer="对">
+                    在PowerPoint中用户可给一个对象添加诸如进入、强调、退出等多种不同类型动画效果通过合理设置各动画顺序、触发条件及时长等参数能创造丰富动态展示效果所以该说法正确。
                 </div>
                 <div class="analysis-area" id="analysis19">
                     <div class="analysis-title">答题解析</div>
                     <div class="analysis-content" id="analysisContent19"></div>
                 </div>
             </div>
-
-
-
-
+            <!-- 题目20 -->
+            <div class="question-card" data-question-id="20">
+                <div class="question-title">20.在PowerPoint2010中，可以通过插入“艺术字”来给幻灯片的内容添加文字说明。（）</div>
+                <img src="images/ppt_judge_question_20.png" alt="" class="question-img" style="width:260px;">
+                <div class="judge-options">
+                    <div class="judge-item">
+                        <input type="radio" name="q20" value="对" id="q20a">
+                        <label for="q20a">对</label>
+                    </div>
+                    <div class="judge-item">
+                        <input type="radio" name="q20" value="错" id="q20b">
+                        <label for="q20b">错</label>
+                    </div>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="对">
+                    在PowerPoint2010中，“插入”选项卡下有“艺术字”功能。用户可通过此功能插入具有丰富样式和效果的艺术字，为幻灯片内容添加文字说明，既能传递信息，又能增强视觉吸引力。所以该说法正确。
+                </div>
+                <div class="analysis-area" id="analysis20">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent20"></div>
+                </div>
+            </div>
+             <!-- 题目21 -->
+            <div class="question-card" data-question-id="21">
+                <div class="question-title">21.在PowerPoint中要使幻灯片中的文字和图片按照指定的顺序播放可以通过设置动画效果来实现。（）</div>
+                <div class="judge-options">
+                    <div class="judge-item">
+                        <input type="radio" name="q21" value="对" id="q21a">
+                        <label for="q21a">对</label>
+                    </div>
+                    <div class="judge-item">
+                        <input type="radio" name="q21" value="错" id="q21b">
+                        <label for="q21b">错</label>
+                    </div>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="对">
+                    在PowerPoint中通过对文字和图片分别设置动画效果并在动画窗格中调整动画的顺序、开始方式等参数能够使它们按照指定顺序播放所以该说法正确。
+                </div>
+                <div class="analysis-area" id="analysis21">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent21"></div>
+                </div>
+            </div>
+            <!-- 题目22 -->
+            <div class="question-card" data-question-id="22">
+                <div class="question-title">22.在PowerPoint2010中可以点击下图中的“全部应用”将该切换效果应用到所有幻灯片中。（）</div>
+                <div class="judge-options">
+                    <div class="judge-item">
+                        <input type="radio" name="q22" value="对" id="q22a">
+                        <label for="q22a">对</label>
+                    </div>
+                    <div class="judge-item">
+                        <input type="radio" name="q22" value="错" id="q22b">
+                        <label for="q22b">错</label>
+                    </div>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="对">
+                    在PowerPoint2010幻灯片切换设置界面“全部应用”按钮功能就是将当前选中切换效果应用到演示文稿所有幻灯片中所以该说法正确。
+                </div>
+                <div class="analysis-area" id="analysis22">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent22"></div>
+                </div>
+            </div>
 
         </div>
 

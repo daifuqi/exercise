@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ppt习题闯关系统</title>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <!-- 新增：左侧题号导航栏 -->
+    <div class="question-nav" id="questionNav">
+        <div class="nav-title">题目导航</div>
+        <div class="nav-list" id="navList">
+            <!-- 题号将通过JS动态生成 -->
+        </div>
+    </div>
+    <div class="container">
+        <h1>PPT选择练习</h1>
+        <a style="display: inline-block;align-items: center;justify-content: center;width: 80;height: 80;border: 3px solid #e5e7eb; border-radius: 6px;background-color: #ffffff; color: #374151;" href="index.html">返回主页</a>
+        <!-- 答题进度提示 -->
+        <div class="question-progress" id="questionProgress">当前：第1题 / 共25题</div>
+        
+        <!-- 题目列表：带图题目预留图片标签 -->
+        <div class="question-list" id="questionList">
+            <!-- 题目2-->
+            <!-- 题目2-->
+            <div class="question-card" data-question-id="2">
+                <div class="question-title">2. 在PowerPoint幻灯片中播放背景音乐，在“音频工具—播放”中设置“开始”为“跨幻灯片播放”，音乐将会（）。</div>
+                <!-- 如需加图，在此处插入：<img src="images/question_2_text.png" alt="" class="question-img"> -->
+                <div class="option-item">
+                    <input type="radio" name="q2" value="A" id="q2a">
+                    <label for="q2a">A. 连续播放，直到转到下一张幻灯片为止</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q2" value="B" id="q2b">
+                    <label for="q2b">B. 切换到下一张幻灯片继续播放</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q2" value="C" id="q2c">
+                    <label for="q2c">C. 在放映第一张幻灯片时自动开始播放</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q2" value="D" id="q2d">
+                    <label for="q2d">D. 在放映该幻灯片时单击音频来手动播放</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="B">
+                    当在“音频工具—播放”中设置“开始”为“跨幻灯片播放”时，其目的就是让音乐在幻灯片切换后仍能持续播放，以营造连贯的背景音乐效果。
+                    - 选项A：如果是直到转到下一张幻灯片为止，那就不是跨幻灯片播放的效果，而是在当前幻灯片内播放的设定，所以A错误。
+                    - 选项B：符合“跨幻灯片播放”的功能设定，即切换到下一张幻灯片继续播放，B正确。
+                    - 选项C：“跨幻灯片播放”设置主要针对的是幻灯片切换时音乐的播放状态，而非第一张幻灯片是否自动播放，第一张幻灯片自动播放通常由“开始”设置中的“自动”选项决定，所以C错误。
+                    - 选项D：单击音频手动播放与“跨幻灯片播放”所设定的自动延续播放音乐的功能不符，所以D错误。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis2">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent2"></div>
+                </div>
+            </div>
+            <!-- 题目3-->
+            <div class="question-card" data-question-id="3">
+                <div class="question-title">3. 如图所示是某张幻灯片中的动画效果设置，下列说法错误的是（）。</div>
+                <img src="images/ppt_choice_question_3.png" alt="" class="question-img" style="width:300px;">
+                <div class="option-item"><input type="radio" name="q3" value="A" id="q3a"><label for="q3a">A. 幻灯片中的所有动画效果同时出现</label></div>
+                <div class="option-item"><input type="radio" name="q3" value="B" id="q3b"><label for="q3b">B. 图片设置了2个动画效果</label></div>
+                <div class="option-item"><input type="radio" name="q3" value="C" id="q3c"><label for="q3c">C. 每个文本对象都只设置了1个动画效果</label></div>
+                <div class="option-item"><input type="radio" name="q3" value="D" id="q3d"><label for="q3d">D. 图片的动画效果最先出现</label></div>
+                <div class="answer-info" style="display:none" data-correct-answer="A"> 
+                    从图中可以看出动画不是同时出现的。选项B，从图能够明确看出图片设置了2个动画效果；选项C，图中每个文本对象看起来确实只设置了1个动画效果；选项D，图片的动画效果在顺序上有可能是最先出现的。所以选项A说法错误，是本题答案。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis3">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent3"></div>
+                </div>
+            </div>
+            <!-- 题目4 -->
+            <div class="question-card" data-question-id="4">
+                <div class="question-title">4. 在PowerPoint2010中，某张幻灯片的制作界面如图所示，可以看出对“蝴蝶”设置了（）动画效果。</div>
+                <img src="images/ppt_choice_question_4.png" alt="" class="question-img" style="width:300px;">
+                <div class="option-item"><input type="radio" name="q4" value="A" id="q4a"><label for="q4a">A. 动作路径</label></div>
+                <div class="option-item"><input type="radio" name="q4" value="B" id="q4b"><label for="q4b">B. 退出</label></div>
+                <div class="option-item"><input type="radio" name="q4" value="C" id="q4c"><label for="q4c">C. 强调</label></div>
+                <div class="option-item"><input type="radio" name="q4" value="D" id="q4d"><label for="q4d">D. 进入</label></div>
+                <div class="answer-info" style="display:none" data-correct-answer="A"> 
+                    从幻灯片制作界面可判断，“蝴蝶”设置的动画效果为动作路径，因为动作路径能让对象沿着特定轨迹移动，符合对“蝴蝶”动画设置的呈现。而退出是使对象从画面消失的动画；强调是突出显示对象的动画；进入是对象进入画面的动画，均不符合图中“蝴蝶”的动画表现。所以答案为A。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis4">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent4"></div>
+                </div>
+            </div>
+            <!-- 题目5 -->
+            <div class="question-card" data-question-id="5">
+                <div class="question-title">5. 在PowerPoint2010演示文稿中，关于下图所示的设置，描述正确的是（）。</div>
+                <img src="images/ppt_choice_question_5.png" alt="" class="question-img" style="width:300px;">
+                <div class="option-item"><input type="radio" name="q5" value="A" id="q5a"><label for="q5a">A. 当前设置的是幻灯片中对象的动画效果</label></div>
+                <div class="option-item"><input type="radio" name="q5" value="B" id="q5b"><label for="q5b">B. 当前幻灯片设置的切换方式为“溶解”</label></div>
+                <div class="option-item"><input type="radio" name="q5" value="C" id="q5c"><label for="q5c">C. 当前幻灯片在播放时只能单击鼠标才能换到下一张幻灯片</label></div>
+                <div class="option-item"><input type="radio" name="q5" value="D" id="q5d"><label for="q5d">D. 当前幻灯片的切换效果使用了声音，且持续时间为20秒</label></div>
+                <div class="answer-info" style="display:none" data-correct-answer="B"> 
+                    从图中可知当前设置处于幻灯片切换相关设置区域，“溶解”是幻灯片切换方式之一，所以选项B正确。选项A，图中明显是幻灯片切换设置并非对象动画效果设置；选项C，幻灯片切换设置中虽有单击鼠标换片设置，但也可设置自动换片，并非只能单击鼠标换片；选项D，图中未体现切换效果使用声音及持续时间为20秒。因此本题正确答案是B。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis5">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent5"></div>
+                </div>
+            </div>
+            <!-- 题目6 -->
+            <div class="question-card" data-question-id="6">
+                <div class="question-title">6. 在PowerPoint2010中编辑幻灯片时，点击“<img src="images/ppt_choice_question_6.png" alt="" class="question-img-option"/>”命令按钮不能完成的操作是（）。</div>
+                <div class="option-item"><input type="radio" name="q6" value="A" id="q6a"><label for="q6a">A. 设置幻灯片的起始编号</label></div>
+                <div class="option-item"><input type="radio" name="q6" value="B" id="q6b"><label for="q6b">B. 设置幻灯片的方向</label></div>
+                <div class="option-item"><input type="radio" name="q6" value="C" id="q6c"><label for="q6c">C. 设置幻灯片的大小</label></div>
+                <div class="option-item"><input type="radio" name="q6" value="D" id="q6d"><label for="q6d">D. 设置幻灯片的背景样式</label></div>
+                <div class="answer-info" style="display:none" data-correct-answer="D"> 
+                    在PowerPoint 2010的“页面设置”中，可以对幻灯片的起始编号、方向和大小进行设置。然而，幻灯片背景样式的设置需通过“背景”相关命令来完成，并非在“页面设置”中操作。所以答案是D。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis6">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent6"></div>
+                </div>
+            </div>
+            <!-- 题目7 -->
+            <div class="question-card" data-question-id="7">
+                <div class="question-title">
+                    7. 在PowerPoint2010中，要给某一对象同时设置两个动画效果，可以在设置完第1个动画效果后，通过（）来添加第2个动画效果。
+                </div>
+                <img src="images/ppt_choice_question_7.png" alt="" class="question-img" style="width:300px;">
+                <div class="option-item">
+                    <input type="radio" name="q7" value="A" id="q7a"><label for="q7a">A. 插入</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q7" value="B" id="q7b"><label for="q7b">B. 添加动画</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q7" value="C" id="q7c"><label for="q7c">C. 效果选项</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q7" value="D" id="q7d"><label for="q7d">D. 触发</label>
+                </div>
+                <div class="answer-info" style="display:none" data-correct-answer="B"> 
+                    在PowerPoint2010中，若要给对象添加多个动画效果，在设置好第一个动画后，应通过“添加动画”来添加第二个动画。“插入”主要用于插入诸如图片、形状等其他元素，并非用于添加动画；“效果选项”是对已添加动画的效果进行细节设置；“触发”是设定动画开始的条件。所以答案是B。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis7">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent7"></div>
+                </div>
+            </div>
+
+            <!-- 题目11 -->
+            <div class="question-card" data-question-id="11">
+                <div class="question-title">11. 在PowerPoint2010中，某张幻灯片的动画设置如图所示，下列叙述错误的是（）。</div>
+                <img src="images/ppt_choice_question_11.png" alt="" class="question-img" style="width:300px;">
+                <div class="option-item">
+                    <input type="radio" name="q11" value="A" id="q11a">
+                    <label for="q11a">本张幻灯片中共有5个动画。</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q11" value="B" id="q11b">
+                    <label for="q11b">第1个动画的动画效果是淡出。</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q11" value="C" id="q11c">
+                    <label for="q11c">播放该张幻灯片时，第一个出现的对象是图片。</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q11" value="D" id="q11d">
+                    <label for="q11d">可以在动画窗格中调整动画的顺序。</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="C"> 
+                    解析：1. 选项A正确，从动画设置图中可查看该幻灯片共有5个动画条目；2. 选项B正确，第1个动画的动画效果为淡出（淡出是PowerPoint2010中常见的进入或强调动画效果之一，与图中设置一致）；3. 选项C错误，播放该张幻灯片时，第一个出现的对象是文本框而非图片，这是本题的错误选项；4. 选项D正确，PowerPoint2010的动画窗格支持通过拖拽动画条目来调整动画的播放顺序，满足用户自定义动画播放逻辑的需求。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis11">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent11"></div>
+                </div>
+            </div>
+
+            <!-- 题目12 -->
+            <div class="question-card" data-question-id="12">
+                <div class="question-title">12. 在PowerPoint2010中，使用SmartArt图形来绘制公司的组织架构，想要在图1中的“营销部”增加一个“客服”，效果如图2所示，可以在“营销部”上单击鼠标右键，在弹出的快捷菜单中，选择“添加形状”下的“（）”，并编辑文字“客服”。</div>
+                <img src="images/ppt_choice_question_12.png" alt="" class="question-img" style="width:260px;">
+                <div class="option-item">
+                    <input type="radio" name="q12" value="A" id="q12a">
+                    <label for="q12a">在后面添加形状</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q12" value="B" id="q12b">
+                    <label for="q12b">在前面添加形状</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q12" value="C" id="q12c">
+                    <label for="q12c">在上方添加形状</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q12" value="D" id="q12d">
+                    <label for="q12d">在下方添加形状</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="D"> 
+                    解析：1. 选项A错误，“在后面添加形状”是在当前形状的同级右侧添加新形状，不会形成“营销部”包含“客服”的层级关系，与图2效果不符；2. 选项B错误，“在前面添加形状”是在当前形状的同级左侧添加新形状，同样为同级关系，无法实现下属部门的添加效果；3. 选项C错误，“在上方添加形状”是在当前形状的上级位置添加新形状，会使“客服”成为“营销部”的上级部门，与组织架构逻辑相悖；4. 选项D正确，“在下方添加形状”是在当前形状的下级位置添加新形状，能够让“客服”成为“营销部”的下属部门，与图2展示的效果一致，符合题目要求。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis12">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent12"></div>
+                </div>
+            </div>
+            <!-- 题目13 -->
+            <div class="question-card" data-question-id="13">
+                <div class="question-title">13. 在PowerPoint2010中，单击<img src="images/ppt_choice_question_13.png" alt="" class="question-img-option">将会（）。</div>
+                
+                <div class="option-item">
+                    <input type="radio" name="q13" value="A" id="q13a">
+                    <label for="q13a">从当前幻灯片开始放映</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q13" value="B" id="q13b">
+                    <label for="q13b">从头开始放映</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q13" value="C" id="q13c">
+                    <label for="q13c">广播幻灯片</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q13" value="D" id="q13d">
+                    <label for="q13d">自定义放映幻灯片</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="A"> 
+                    解析：1. 选项A正确，PowerPoint2010中，对应“从当前幻灯片开始放映”的功能按钮，单击后会直接从当前选中的幻灯片开始播放演示文稿，无需从头开始，提高了演示的便捷性；2. 选项B错误，“从头开始放映”是从演示文稿的第1张幻灯片开始播放，对应的操作按钮和快捷键（F5）与本题所述操作不符；3. 选项C错误，“广播幻灯片”是将幻灯片演示内容通过网络广播给远程观众，并非本地常规放映功能，与题干要求不符；4. 选项D错误，“自定义放映幻灯片”是预先设置放映的幻灯片范围、顺序，创建自定义放映方案后再进行播放，并非单击即可直接触发的即时放映操作。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis13">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent13"></div>
+                </div>
+            </div>
+            <!-- 题目15 -->
+            <div class="question-card" data-question-id="15">
+                <div class="question-title">15. 要在PowerPoint2010中插入如下图所示的对象，可执行的操作是（）。</div>
+                <img src="images/ppt_choice_question_15.png" alt="" class="question-img" style="width:150px;">
+                <div class="option-item">
+                    <input type="radio" name="q15" value="A" id="q15a">
+                    <label for="q15a">选择"开始"选项卡中的"形状"命令来插入该对象</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q15" value="B" id="q15b">
+                    <label for="q15b">选择"开始"选项卡中的"SmartArt"命令来插入该对象</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q15" value="C" id="q15c">
+                    <label for="q15c">选择"插入"选项卡中的"形状"命令来插入该对象</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q15" value="D" id="q15d">
+                    <label for="q15d">选择"插入"选项卡中的"SmartArt"命令来插入该对象</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="C"> 
+                    解析：1. 选项A错误，"开始"选项卡的核心功能是对幻灯片中的文本、对象进行格式设置（如字体、段落、对齐方式等），并不包含"形状"插入命令，形状插入不属于格式设置类操作；2. 选项B错误，其一，"开始"选项卡无"SmartArt"命令；其二，SmartArt图形用于创建层级化、结构化的图示（如组织架构、流程图等），与题干中的普通对象插入需求不符；3. 选项C正确，PowerPoint2010中，"插入"选项卡包含各类对象的插入功能，"形状"命令就在该选项卡下，可用于插入矩形、圆形、线条等各类基础图形对象，符合题干要求；4. 选项D错误，"SmartArt"命令虽位于"插入"选项卡，但该命令用于创建预设样式的结构化图示，无法插入题干中的普通对象，与操作需求不匹配。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis15">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent15"></div>
+                </div>
+            </div>
+            <!-- 题目17 -->
+            <div class="question-card" data-question-id="17">
+                <div class="question-title">17. 在PowerPoint2010中，若要将左图变成右图的效果，可以通过"图片工具-格式"选项卡下的（）功能来实现。</div>
+                <img src="images/ppt_choice_question_17.png" alt="" class="question-img">
+                <div class="option-item">
+                    <input type="radio" name="q17" value="A" id="q17a">
+                    <label for="q17a">裁剪为形状</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q17" value="B" id="q17b">
+                    <label for="q17b">压缩图片</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q17" value="C" id="q17c">
+                    <label for="q17c">图片样式</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q17" value="D" id="q17d">
+                    <label for="q17d">艺术效果</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="C"> 
+                    解析：1. 选项A错误，“裁剪为形状”仅能将图片的轮廓裁剪成预设或自定义的形状，仅改变图片外形，无法实现右图的整体视觉样式调整效果；2. 选项B错误，“压缩图片”的作用是减小图片的文件大小，优化演示文稿存储体积，对图片的视觉显示效果无任何调整作用；3. 选项C正确，PowerPoint2010中“图片工具-格式”选项卡下的“图片样式”提供了预设的边框、阴影、倒影、柔化边缘等组合效果，可一键将图片调整为预设的视觉样式，与左图变右图的效果需求匹配；4. 选项D错误，“艺术效果”是为图片添加素描、水彩、油画等艺术化滤镜效果，会改变图片本身的显示质感，与题干中常规的样式美化效果不符。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis17">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent17"></div>
+                </div>
+            </div>
+            <!-- 题目18 -->
+            <div class="question-card" data-question-id="18">
+                <div class="question-title">18. 下图为PowerPoint2010演示文稿中设置对象动画时的动画窗格，下列说法正确的是（）。</div>
+                <img src="images/ppt_choice_question_18.png" alt="" class="question-img" style="width:300px;">
+                <div class="option-item">
+                    <input type="radio" name="q18" value="A" id="q18a">
+                    <label for="q18a">在4个不同对象上设置了相同的动画效果</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q18" value="B" id="q18b">
+                    <label for="q18b">在同一个对象上设置了4个不同的动画效果</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q18" value="C" id="q18c">
+                    <label for="q18c">4个动画的持续时间相同</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q18" value="D" id="q18d">
+                    <label for="q18d">4个动画设置了不同的延迟时间</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="B"> 
+                    解析：1. 选项A错误，PowerPoint2010动画窗格中，同一对象的多个动画会以缩进层级显示在该对象名称下方，此窗格的4个动画为缩进的层级关系，并非4个不同对象的动画，因此并非在不同对象上设置动画；2. 选项B正确，动画窗格的层级显示特征为：主条目为对象名称，下方缩进的条目为该对象添加的多个动画，此窗格中4个动画同属一个对象的缩进条目，说明是在同一个对象上设置了4个不同的动画效果；3. 选项C错误，从动画窗格的时间轴刻度可判断，4个动画的时间轴长度不同，代表动画的持续时间存在差异，并非完全相同；4. 选项D错误，延迟时间体现在动画时间轴的起始偏移量，此窗格中4个动画的时间轴均无偏移且依次衔接，说明未设置延迟时间（或延迟时间均为0），并非设置了不同的延迟时间。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis18">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent18"></div>
+                </div>
+            </div>
+            <!-- 题目19 -->
+            <div class="question-card" data-question-id="19">
+                <div class="question-title">19. 在PowerPoint2010中编辑幻灯片时，点击“ <img src="images/ppt_choice_question_19.png" alt="" class="question-img-option">”命令按钮不能完成的操作是（）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q19" value="A" id="q19a">
+                    <label for="q19a">设置每张幻灯片的编号</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q19" value="B" id="q19b">
+                    <label for="q19b">设置幻灯片的页眉文本</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q19" value="C" id="q19c">
+                    <label for="q19a">设置幻灯片的页脚文本</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q19" value="D" id="q19d">
+                    <label for="q19d">设置幻灯片的制作日期和时间</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="A"> 
+                    解析：1. 选项A错误，幻灯片编号的设置并非通过“页眉和页脚”完成，PowerPoint2010中需通过「插入」选项卡下的「幻灯片编号」命令来设置，该功能可批量为幻灯片添加连续编号，与页眉页脚为独立的设置功能；2. 选项B正确，“页眉和页脚”对话框中包含「页眉」文本输入框，可直接在其中编辑并设置幻灯片的页眉文本内容，应用到所选或全部幻灯片；3. 选项C正确，“页眉和页脚”对话框的核心功能之一就是设置页脚文本，可自定义页脚内容并选择是否应用到标题幻灯片，是该命令的常用操作；4. 选项D正确，“页眉和页脚”对话框中提供了「日期和时间」选项，可选择固定日期或自动更新的日期时间，设置后会显示在幻灯片的页眉/页脚区域，完成日期时间的添加。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis19">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent19"></div>
+                </div>
+            </div>
+            <!-- 题目20 -->
+            <div class="question-card" data-question-id="20">
+                <div class="question-title">20. 在幻灯片放映的过程中，鼠标右键点击放映页面时出现如下快捷菜单，下列说法错误的是（）。</div>
+                <img src="images/ppt_choice_question_20.png" alt="" class="question-img" style="width:300px;">
+                <div class="option-item">
+                    <input type="radio" name="q20" value="A" id="q20a">
+                    <label for="q20a">此演示文稿共有5张幻灯片</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q20" value="B" id="q20b">
+                    <label for="q20b">当前放映的是第5张幻灯片</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q20" value="C" id="q20c">
+                    <label for="q20c">点击上一张、下一张可以回到第一页和最后一页</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q20" value="D" id="q20d">
+                    <label for="q20d">可以快速切换到指定页幻灯片</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="C"> 
+                    解析：1. 选项A正确，从右键快捷菜单的页码显示“5”可判断，该演示文稿的总幻灯片数量为5张；2. 选项B正确，页码显示“5/5”代表当前放映的是第5张，也是最后一张幻灯片；3. 选项C错误，“上一张”“下一张”仅能逐页切换幻灯片，在第5张（最后一页）点击“下一张”无任何反应，无法跳转到最后一页；在第1张点击“上一张”也无反应，无法回到第一页，需通过“定位至幻灯片”等功能直接跳转，而非逐页点击；4. 选项D正确，右键快捷菜单中包含“定位至幻灯片”相关选项，可在子菜单中选择具体页码，实现快速切换到指定页幻灯片的操作。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis20">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent20"></div>
+                </div>
+            </div>
+            <!-- 题目21 -->
+            <div class="question-card" data-question-id="21">
+                <div class="question-title">21. 在PowerPoint中，如下图所示，第（）张幻灯片设置了自动换片。</div>
+                <img src="images/ppt_choice_question_21.png" alt="" class="question-img" style="width:300px;">
+                <div class="option-item">
+                    <input type="radio" name="q21" value="A" id="q21a">
+                    <label for="q21a">2、3、4</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q21" value="B" id="q21b">
+                    <label for="q21b">2、4</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q21" value="C" id="q21c">
+                    <label for="q21c">2、3</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q21" value="D" id="q21d">
+                    <label for="q21d">1、3、5</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="B"> 
+                    解析：1. 选项A错误，第3张幻灯片下方未显示自动换片时间，未设置自动换片功能，因此包含3的选项不符合要求；2. 选项B正确，PowerPoint中，幻灯片下方显示具体时间数值（如00:05、00:10）代表已设置自动换片，从图示可判断第2、4张幻灯片均显示了自动换片时间，符合要求；3. 选项C错误，第3张幻灯片无自动换片时间显示，未开启自动换片功能，该选项包含错误幻灯片编号；4. 选项D错误，第1、3、5张幻灯片下方均无自动换片时间显示，均未开启自动换片功能，整体选项错误。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis21">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent21"></div>
+                </div>
+            </div>
+            <!-- 题目22 -->
+            <div class="question-card" data-question-id="22">
+                <div class="question-title">22. 在PowerPoint2010中，制作演示文稿的部分界面如下图所示，下列说法正确的是（）。</div>
+                <img src="images/ppt_choice_question_22.png" alt="PowerPoint2010演示文稿制作界面" class="question-img" style="width:300px;">
+                <div class="option-item">
+                    <input type="radio" name="q22" value="A" id="q22a">
+                    <label for="q22a">第1、2、3张幻灯片的切换效果都是擦除</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q22" value="B" id="q22b">
+                    <label for="q22b">第2张幻灯片的切换效果是擦除</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q22" value="C" id="q22c">
+                    <label for="q22c">第1、2、3张幻灯片的切换效果都是相同的</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q22" value="D" id="q22d">
+                    <label for="q22d">只有第2张幻灯片有切换效果</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="B"> 
+                    解析：1. 选项A错误，从图示界面可判断，仅第2张幻灯片的切换效果为“擦除”，第1、3张幻灯片未显示“擦除”切换效果标识，并非三张幻灯片切换效果都是擦除；2. 选项B正确，PowerPoint2010中，幻灯片切换效果会在对应幻灯片界面或切换面板中明确标注，图示中第2张幻灯片的切换效果已确认是“擦除”，该说法符合实际情况；3. 选项C错误（修正前原重复B选项），第1、2、3张幻灯片的切换效果未呈现统一标识，存在差异，并非全部相同；4. 选项D错误，切换效果是幻灯片之间的过渡效果，通常多张幻灯片可同时设置，图示中并非只有第2张幻灯片具备切换效果，第1、3张也存在对应的切换效果（仅非“擦除”）。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis22">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent22"></div>
+                </div>
+            </div>
+            <!-- 题目23 -->
+            <div class="question-card" data-question-id="23">
+                <div class="question-title">23. 如图所示，如需从第一张幻灯片开始放映演示文稿可以按下键盘上的（）键。</div>
+                <img src="images/ppt_choice_question_23.png" alt="PowerPoint幻灯片放映快捷键界面" class="question-img" style="width:300px;">
+                <div class="option-item">
+                    <input type="radio" name="q23" value="A" id="q23a">
+                    <label for="q23a">F5</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q23" value="B" id="q23b">
+                    <label for="q23b">Alt+F5</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q23" value="C" id="q23c">
+                    <label for="q23c">Shift+F5</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q23" value="D" id="q23d">
+                    <label for="q23d">Ctrl+F5</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="A"> 
+                    解析：1. 选项A正确，在PowerPoint2010中，按下`F5`键是从演示文稿的第1张幻灯片开始全屏放映的标准快捷键，这是最常用的从头放映方式。
+                2. 选项B错误，`Alt+F5`的作用是启动“演示者视图”，该视图可让演讲者在自己的屏幕上看到备注和下一张幻灯片预览，并非用于从头放映。
+                3. 选项C错误，`Shift+F5`是从当前选中的幻灯片开始放映的快捷键，而非从第1张开始。
+                4. 选项D错误，`Ctrl+F5`在PowerPoint中无默认的放映相关功能，该快捷键在浏览器等软件中通常用于强制刷新页面。
+                    </div>
+                    <!-- 新增：解析展示区域 -->
+                    <div class="analysis-area" id="analysis23">
+                        <div class="analysis-title">答题解析</div>
+                        <div class="analysis-content" id="analysisContent23"></div>
+                    </div>
+            </div>
+            <!-- 题目24 -->
+            <div class="question-card" data-question-id="24">
+                <div class="question-title">24. 在PowerPoint中，如下图所示，第（）张幻灯片没有设置自动换片。</div>
+                <img src="images/ppt_choice_question_24.png" alt="PowerPoint自动换片设置界面" class="question-img" style="width:300px;">
+                <div class="option-item">
+                    <input type="radio" name="q24" value="A" id="q24a">
+                    <label for="q24a">1</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q24" value="B" id="q24b">
+                    <label for="q24b">2</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q24" value="C" id="q24c">
+                    <label for="q24c">3</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q24" value="D" id="q24d">
+                    <label for="q24d">都没有</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="C"> 
+                    解析：1. 选项A错误，第1张幻灯片下方显示了自动换片的时间数值，说明已经开启了自动换片功能；2. 选项B错误，第2张幻灯片下方同样有自动换片时间标识，具备自动换片的设置；3. 选项C正确，PowerPoint中幻灯片下方无时间数值显示，代表未设置自动换片，从图示可判断第3张幻灯片无自动换片时间标注，符合题目要求；4. 选项D错误，第1、2张幻灯片均已设置自动换片，并非所有幻灯片都没有设置。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis24">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent24"></div>
+                </div>
+            </div>
+            <!-- 题目25 -->
+            <div class="question-card" data-question-id="25">
+                <div class="question-title">25. 如图所示，给幻灯片中的图片设置动画效果，此图片一共设置了（）个动画效果。</div>
+                <img src="images/ppt_choice_question_25.png" alt="PowerPoint图片动画设置界面" class="question-img" style="width:300px;">
+                <div class="option-item">
+                    <input type="radio" name="q25" value="A" id="q25a">
+                    <label for="q25a">0</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q25" value="B" id="q25b">
+                    <label for="q25b">1</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q25" value="C" id="q25c">
+                    <label for="q25c">2</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q25" value="D" id="q25d">
+                    <label for="q25d">3</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="C"> 
+                    解析：1. 选项A错误，从图示的动画窗格或动画设置界面能看到该图片存在动画条目，并非未设置任何动画；2. 选项B错误，动画窗格中该图片对应的动画条目数量为2个，不是1个；3. 选项C正确，PowerPoint的动画窗格中，同一个对象的多个动画会以缩进形式展示在对象名称下方，从图示可判断该图片共添加了2个动画效果，符合题意；4. 选项D错误，该图片对应的动画条目数量为2，并非3个，此选项与实际设置情况不符。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis25">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent25"></div>
+                </div>
+            </div>
+            <!-- 题目26 -->
+            <div class="question-card" data-question-id="26">
+                <div class="question-title">26. 如图所示，下列关于该幻灯片切换的说法正确的是（）。</div>
+                <img src="images/ppt_choice_question_26.png" alt="PowerPoint幻灯片切换设置界面" class="question-img" style="width:300px;">
+                <div class="option-item">
+                    <input type="radio" name="q26" value="A" id="q26a">
+                    <label for="q26a">当前幻灯片的切换效果为“覆盖”</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q26" value="B" id="q26b">
+                    <label for="q26b">切换当前幻灯片时无声音</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q26" value="C" id="q26c">
+                    <label for="q26c">当前幻灯片的持续时间为“1.2秒”</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q26" value="D" id="q26d">
+                    <label for="q26d">当前幻灯片不会自动切换</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="C"> 
+                    解析：1. 选项A错误，从图示幻灯片切换设置界面可判断，当前幻灯片的切换效果并非“覆盖”，该选项与实际设置不符；2. 选项B错误，切换设置界面中通常会标注切换声音，图示中存在对应的切换声音设置，并非无声音；3. 选项C正确，PowerPoint幻灯片切换设置面板中，“持续时间”选项会明确显示切换效果的播放时长，从图示可确认当前幻灯片的切换持续时间为“1.2秒”，符合题意；4. 选项D错误，图示中可看到自动切换的相关设置标识（或时间设置），说明当前幻灯片会进行自动切换，该说法错误。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis26">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent26"></div>
+                </div>
+            </div>
+            <!-- 题目27 -->
+            <div class="question-card" data-question-id="27">
+                <div class="question-title">27. 要插入下图所示的标注“请看这里”，可以执行“插入”选项卡中“形状”命令下的（）。</div>
+                <img src="images/ppt_choice_question_27.png" alt="PowerPoint标注形状示例" class="question-img" style="width:300px;">
+                <div class="option-item">
+                    <input type="radio" name="q27" value="A" id="q27a">
+                    <label for="q27a">矩形标注</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q27" value="B" id="q27b">
+                    <label for="q27b">线型标注1</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q27" value="C" id="q27c">
+                    <label for="q27c">椭圆形标注</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q27" value="D" id="q27d">
+                    <label for="q27d">云形标注</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="D"> 
+                    解析：1. 选项A错误，矩形标注的外形为规则矩形，边缘平滑且无云朵状的不规则轮廓，与题干所示标注形状不符；2. 选项B错误，线型标注1以线条为主体，附带简短的标注文本框，无明显的图形轮廓，无法实现题干中“请看这里”的图形标注效果；3. 选项C错误，椭圆形标注的外形为椭圆形状，轮廓流畅对称，和题干里的不规则云状外观不匹配；4. 选项D正确，云形标注的核心特征是边缘呈云朵状的不规则波浪轮廓，专门用于突出强调特定内容，与题干所示标注的外观完全一致，可通过“插入”选项卡的“形状”命令选择插入。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis27">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent27"></div>
+                </div>
+            </div>
+            <!-- 题目28 -->
+            <div class="question-card" data-question-id="28">
+                <div class="question-title">28. 在PowerPoint2010演示文稿中设置某对象的动画时，下列说法错误的是（）。</div>
+                <!-- 如需加图，在此处插入：<img src="images/question_28_text.png" alt="" class="question-img"> -->
+                <div class="option-item"><input type="radio" name="q28" value="A" id="q28a"><label for="q28a">A. 可以为该对象设置多个进入动画</label></div>
+                <div class="option-item"><input type="radio" name="q28" value="B" id="q28b"><label for="q28b">B. 可以同时为该对象设置进入、强调、退出动画</label></div>
+                <div class="option-item"><input type="radio" name="q28" value="C" id="q28c"><label for="q28c">C. 可以调整该对象不同动画的播放顺序</label></div>
+                <div class="option-item"><input type="radio" name="q28" value="D" id="q28d"><label for="q28d">D. 该对象的动画不能修改，只能删除</label></div>
+                <div class="answer-info" style="display:none" data-correct-answer="D">
+                    在PowerPoint2010中，对对象设置动画有多种操作。A选项，确实能够为对象设置多个进入动画，丰富对象的展示效果；B选项，同时为对象设置进入、强调、退出动画，可以全方位地突出对象在演示过程中的不同阶段表现；C选项，能够对同一对象不同动画的播放顺序进行调整，以满足演示逻辑需求。而D选项说法错误，在PowerPoint2010中，对象的动画不仅可以删除，也能够进行修改，例如更改动画效果、持续时间、延迟时间等。所以本题答案为D。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis28">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent28"></div>
+                </div>
+            </div>
+            <!-- 题目29 -->
+            <div class="question-card" data-question-id="29">
+                <div class="question-title">29. 幻灯片的动画效果设置如图所示，下列说法错误的是（）。</div>
+                <img src="images/ppt_choice_question_29.png" alt="PowerPoint幻灯片动画效果设置界面" class="question-img" style="width:300px;">
+                <div class="option-item">
+                    <input type="radio" name="q29" value="A" id="q29a">
+                    <label for="q29a">可以调整对象“矩形6”的动画最先出现</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q29" value="B" id="q29b">
+                    <label for="q29b">对象“TextBox10”的动画持续时间最短</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q29" value="C" id="q29c">
+                    <label for="q29c">本张幻灯片一共给3个对象设置了动画效果</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q29" value="D" id="q29d">
+                    <label for="q29d">对象“图片11”的动画效果是第3个出现的</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="D"> 
+                    解析：1. 选项A正确，PowerPoint动画窗格支持通过拖拽动画条目调整播放顺序，只需将“矩形6”对应的动画条目拖拽到列表最上方，即可使其动画最先出现，该操作可实现；2. 选项B正确，从动画设置界面的时间轴可判断，对象“TextBox10”对应的动画时间轴长度最短，代表其动画持续时间最短，符合实际情况；3. 选项C正确，图示中清晰显示了“矩形6”“TextBox10”“图片11”3个不同对象，且均已设置动画效果，说明本张幻灯片共给3个对象设置了动画；4. 选项D错误，从动画窗格的条目顺序可判断，对象“图片11”的动画效果并非第3个出现（大概率为第2个或第4个，与图示条目顺序不符），该说法错误，为本题应选答案。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis29">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent29"></div>
+                </div>
+            </div>
+            <!-- 题目30 -->
+            <div class="question-card" data-question-id="30">
+                <div class="question-title">30. 在PowerPoint2010中，下列对象可以用来建立建立超链接的是（）。</div>
+                <!-- 如需加图，在此处插入：<img src="images/question_30_text.png" alt="" class="question-img"> -->
+                <div class="option-item"><input type="radio" name="q30" value="A" id="q30a"><label for="q30a">A. 视频</label></div>
+                <div class="option-item"><input type="radio" name="q30" value="B" id="q30b"><label for="q30b">B. 表格</label></div>
+                <div class="option-item"><input type="radio" name="q30" value="C" id="q30c"><label for="q30c">C. 音频</label></div>
+                <div class="option-item"><input type="radio" name="q30" value="D" id="q30d"><label for="q30d">D. 图片</label></div>
+                <div class="answer-info" style="display:none" data-correct-answer="D">
+                    在PowerPoint2010中，图片是支持直接插入超链接的。而视频、表格和音频在常规操作下，PowerPoint2010并不支持直接为它们建立超链接。这是因为软件针对不同对象的功能设计有所差异，图片作为一种常用的展示元素，常需要链接到其他相关内容以丰富演示效果，所以具备该功能。因此本题正确答案为D。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis30">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent30"></div>
+                </div>
+            </div>
+
+            <!-- 题目31 -->
+            <div class="question-card" data-question-id="31">
+                <div class="question-title">31. 如图所示，在PowerPoint2010中对某张幻灯片背景进行填充设置，此时单击“关闭”按钮，将会（）。</div>
+                <img src="images/ppt_choice_question_31.png" alt="" class="question-img" style="width: 300px;">
+                <div class="option-item"><input type="radio" name="q31" value="A" id="q31a"><label for="q31a">A. 使该幻灯片的背景恢复成原来的效果</label></div>
+                <div class="option-item"><input type="radio" name="q31" value="B" id="q31b"><label for="q31b">B. 对所有幻灯片应用该背景效果</label></div>
+                <div class="option-item"><input type="radio" name="q31" value="C" id="q31c"><label for="q31c">C. 取消对该幻灯片的背景设置</label></div>
+                <div class="option-item"><input type="radio" name="q31" value="D" id="q31d"><label for="q31d">D. 只对该张幻灯片应用背景效果</label></div>
+                <div class="answer-info" style="display:none" data-correct-answer="D">
+                    在PowerPoint2010中，当对某张幻灯片背景进行填充设置后，单击“关闭”按钮，系统会默认仅将此背景设置应用于当前操作的这张幻灯片。选项A，单击“关闭”按钮并不会使幻灯片背景恢复到原来效果；选项B，若要对所有幻灯片应用该背景效果，需点击“全部应用”按钮；选项C，“关闭”按钮并非取消背景设置，而是确认应用于当前幻灯片。所以答案是D。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis31">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent31"></div>
+                </div>
+            </div>
+
+            <!-- 题目32 -->
+            <div class="question-card" data-question-id="32">
+                <div class="question-title">32. 如图所示，如需从当前选中的幻灯片开始放映演示文稿可以按下键盘上的（）键。</div>
+                <img src="images/ppt_choice_question_32.png" alt="" class="question-img" style="width: 300px;">
+                <div class="option-item"><input type="radio" name="q32" value="A" id="q32a"><label for="q32a">A. F5</label></div>
+                <div class="option-item"><input type="radio" name="q32" value="B" id="q32b"><label for="q32b">B. Alt+F5</label></div>
+                <div class="option-item"><input type="radio" name="q32" value="C" id="q32c"><label for="q32c">C. Shift+F5</label></div>
+                <div class="option-item"><input type="radio" name="q32" value="D" id="q32d"><label for="q32d">D. Ctrl+F5</label></div>
+                <div class="answer-info" style="display:none" data-correct-answer="C">
+                    在PowerPoint操作中，F5键是从演示文稿的第一张幻灯片开始放映；Alt + F5一般用于显示演示者视图（不同软件版本可能有差异）；Shift + F5是从当前选中的幻灯片开始放映；Ctrl + F5通常不是用于控制幻灯片放映的常用快捷键组合。所以本题正确答案是C。
+                </div>
+                <!-- 新增：解析展示区域 -->
+                <div class="analysis-area" id="analysis32">
+                    <div class="analysis-title">答题解析</div>
+                    <div class="analysis-content" id="analysisContent32"></div>
+                </div>
+            </div>
+
+        
+        </div>
+        <!-- 下一题按钮（答题完成后显示） -->
+        <button class="btn next-btn" id="nextBtn">进入下一题</button>
+
+        <!-- 提交结果按钮（最后一题答题完成后显示） -->
+        <button class="btn submit-btn" id="submitAllBtn" style="display: none;">提交所有答案并查看统计结果</button>
+
+        <!-- 结果统计区域 -->
+        <div class="result-container" id="resultContainer">
+            <div class="result-title">闯关完成！答题统计</div>
+            <div class="result-info" id="totalCount">总答题数：0题</div>
+            <div class="result-info" id="correctCount">答对题数：0题</div>
+            <div class="result-info" id="accuracyRate">正确率：0%</div>
+        </div>
+
+        <!-- 新增：右侧上下题按钮容器 -->
+        <div class="btn-sidebar" id="btnSidebar">
+            <button class="sidebar-btn prev-btn" id="prevBtn">↑</button>
+            <button class="sidebar-btn next-btn" id="sidebarNextBtn">↓</button>
+        </div>
+    </div>
+
+    <!-- 新增：自定义提示框（全局唯一） -->
+    <div class="custom-tip" id="customTip">
+        <div class="tip-title" id="tipTitle"></div>
+        <div class="tip-content" id="tipContent"></div>
+        <button class="tip-confirm" id="tipConfirm">确定</button>
+    </div>
+</body>
+<script>
+    // 全局变量
+    let answerRecord = {
+        total: 0, // 总题数
+        correct: 0 // 答对题数
+    };
+    let currentQuestionIndex = 0; // 当前显示的题目索引（从0开始）
+    let allQuestionCards = []; // 所有题目卡片集合
+    let allNavItems = []; // 所有导航题号元素集合
+    const customTip = document.getElementById('customTip'); // 自定义提示框实例
+    const prevBtn = document.getElementById('prevBtn'); // 左侧上一题按钮
+    const sidebarNextBtn = document.getElementById('sidebarNextBtn'); // 右侧下一题按钮
+
+    // 页面加载完成后初始化功能
+    window.onload = function() {
+        // 1. 初始化变量，获取所有题目卡片
+        allQuestionCards = Array.from(document.querySelectorAll('.question-card'));
+        answerRecord.total = allQuestionCards.length;
+        document.getElementById('totalCount').innerText = `总答题数：${answerRecord.total}题`;
+
+        // 2. 动态生成左侧题号导航
+        generateQuestionNav();
+
+        // 3. 显示第一题，更新答题进度和导航激活状态
+        showCurrentQuestion();
+
+        // 4. 更新侧边按钮启用/禁用状态
+        updateSidebarBtnStatus();
+
+        // 5. 为所有单选选项绑定即时判断事件
+        const allRadioInputs = document.querySelectorAll('input[type="radio"]');
+        allRadioInputs.forEach(input => {
+            input.addEventListener('change', function() {
+                // 禁用当前题目的所有选项（防止重复选择）
+                const currentQuestion = this.closest('.question-card');
+                const currentRadioInputs = currentQuestion.querySelectorAll('input[type="radio"]');
+                currentRadioInputs.forEach(radio => radio.disabled = true);
+
+                // 获取当前题目相关数据
+                const questionId = currentQuestion.getAttribute('data-question-id');
+                const answerInfo = currentQuestion.querySelector('.answer-info');
+                const correctAnswer = answerInfo.getAttribute('data-correct-answer');
+                const userAnswer = this.value;
+                const analysis = answerInfo.innerText;
+
+                // 高亮显示正确/错误选项
+                highlightOption(currentQuestion, correctAnswer, userAnswer);
+
+                // 填充解析区域并显示
+                const analysisContent = document.getElementById(`analysisContent${questionId}`);
+                const analysisArea = document.getElementById(`analysis${questionId}`);
+                analysisContent.innerText = analysis;
+                analysisArea.style.display = 'block';
+
+                // 答题结果判断，显示自定义提示框
+                if (userAnswer === correctAnswer) {
+                    currentQuestion.setAttribute('data-is-correct', 'true');
+                    showCustomTip('correct', '回答正确！', '恭喜你，掌握了该知识点～');
+                } else {
+                    currentQuestion.setAttribute('data-is-correct', 'false');
+                    showCustomTip('error', '回答错误', `正确答案是：${correctAnswer}，请仔细查看下方解析哦～`);
+                }
+
+                // 显示下一题按钮（最后一题显示提交按钮）
+                if (currentQuestionIndex < answerRecord.total - 1) {
+                    document.getElementById('nextBtn').style.display = 'block';
+                } else {
+                    document.getElementById('submitAllBtn').style.display = 'block';
+                }
+            });
+        });
+
+        // 6. 绑定自定义提示框确定按钮事件
+        document.getElementById('tipConfirm').addEventListener('click', function() {
+            customTip.style.display = 'none';
+        });
+
+        // 7. 绑定底部下一题按钮事件
+        document.getElementById('nextBtn').addEventListener('click', function() {
+            goToNextQuestion();
+            // 隐藏下一题按钮
+            this.style.display = 'none';
+        });
+
+        // 8. 绑定右侧侧边栏上下题按钮事件
+        prevBtn.addEventListener('click', goToPrevQuestion);
+        sidebarNextBtn.addEventListener('click', goToNextQuestion);
+
+        // 9. 绑定提交按钮事件，统计最终结果
+        document.getElementById('submitAllBtn').addEventListener('click', function() {
+            // 重新统计答对题数
+            answerRecord.correct = 0;
+            allQuestionCards.forEach(card => {
+                const isCorrect = card.getAttribute('data-is-correct');
+                if (isCorrect === 'true') {
+                    answerRecord.correct++;
+                }
+            });
+
+            // 计算正确率（保留2位小数，避免除零错误）
+            const accuracy = answerRecord.total > 0 
+                ? ((answerRecord.correct / answerRecord.total) * 100).toFixed(2) 
+                : '0.00';
+
+            // 更新统计结果页面
+            document.getElementById('correctCount').innerText = `答对题数：${answerRecord.correct}题`;
+            document.getElementById('accuracyRate').innerText = `正确率：${accuracy}%`;
+
+            // 显示统计区域
+            document.getElementById('resultContainer').style.display = 'block';
+
+            // 显示最终结果自定义提示框
+            showCustomTip('correct', '闯关完成！', `总题数：${answerRecord.total}题\n答对题数：${answerRecord.correct}题\n正确率：${accuracy}%`);
+        });
+    };
+
+    // 新增：动态生成左侧题号导航
+    function generateQuestionNav() {
+        const navList = document.getElementById('navList');
+        navList.innerHTML = ''; // 清空原有内容
+
+        for (let i = 0; i < allQuestionCards.length; i++) {
+            const navItem = document.createElement('a');
+            navItem.className = 'nav-item';
+            navItem.dataset.index = i;
+            navItem.innerText = i + 1;
+
+            // 绑定题号点击跳转事件
+            navItem.addEventListener('click', function() {
+                const targetIndex = parseInt(this.dataset.index);
+                goToSpecificQuestion(targetIndex);
+            });
+
+            navList.appendChild(navItem);
+            allNavItems.push(navItem);
+        }
+    }
+
+    // 新增：跳转到指定题号
+    function goToSpecificQuestion(targetIndex) {
+        if (targetIndex < 0 || targetIndex >= allQuestionCards.length) return;
+
+        // 隐藏当前题
+        allQuestionCards[currentQuestionIndex].classList.remove('active');
+        allNavItems[currentQuestionIndex].classList.remove('active');
+
+        // 更新当前索引
+        currentQuestionIndex = targetIndex;
+
+        // 显示目标题
+        showCurrentQuestion();
+
+        // 更新侧边按钮状态
+        updateSidebarBtnStatus();
+    }
+
+    // 新增：跳转到上一题
+    function goToPrevQuestion() {
+        if (currentQuestionIndex > 0) {
+            goToSpecificQuestion(currentQuestionIndex - 1);
+        }
+    }
+
+    // 新增：跳转到下一题
+    function goToNextQuestion() {
+        if (currentQuestionIndex < allQuestionCards.length - 1) {
+            goToSpecificQuestion(currentQuestionIndex + 1);
+            // 隐藏底部下一题按钮
+            document.getElementById('nextBtn').style.display = 'none';
+        }
+    }
+
+    // 新增：更新侧边按钮启用/禁用状态
+    function updateSidebarBtnStatus() {
+        // 上一题按钮：第一题禁用，其余启用
+        if (currentQuestionIndex === 0) {
+            prevBtn.classList.remove('enabled');
+        } else {
+            prevBtn.classList.add('enabled');
+        }
+
+        // 下一题按钮：最后一题禁用，其余启用
+        if (currentQuestionIndex === allQuestionCards.length - 1) {
+            sidebarNextBtn.classList.remove('enabled');
+        } else {
+            sidebarNextBtn.classList.add('enabled');
+        }
+    }
+
+    // 辅助函数1：显示当前题目并更新进度、导航激活状态
+    function showCurrentQuestion() {
+        if (allQuestionCards[currentQuestionIndex] && allNavItems[currentQuestionIndex]) {
+            // 激活当前题目
+            allQuestionCards[currentQuestionIndex].classList.add('active');
+            // 激活当前导航题号
+            allNavItems[currentQuestionIndex].classList.add('active');
+            // 更新答题进度提示
+            document.getElementById('questionProgress').innerText = 
+                `当前：第${currentQuestionIndex + 1}题 / 共${answerRecord.total}题`;
+        }
+    }
+
+    // 辅助函数2：显示自定义提示框
+    function showCustomTip(type, title, content) {
+        const tipTitle = document.getElementById('tipTitle');
+        const tipContent = document.getElementById('tipContent');
+
+        // 重置提示框样式
+        customTip.className = 'custom-tip';
+        customTip.classList.add(`${type}-tip`);
+
+        // 填充内容
+        tipTitle.innerText = title;
+        tipContent.innerText = content;
+
+        // 显示提示框
+        customTip.style.display = 'block';
+    }
+
+    // 辅助函数3：高亮显示正确/错误选项
+    function highlightOption(questionCard, correctAnswer, userAnswer) {
+        const optionItems = questionCard.querySelectorAll('.option-item');
+        optionItems.forEach(item => {
+            const input = item.querySelector('input');
+            if (input.value === correctAnswer) {
+                // 正确选项高亮
+                item.classList.add('correct');
+            } else if (input.value === userAnswer && userAnswer !== correctAnswer) {
+                // 错误选项标记
+                item.classList.add('incorrect');
+            }
+        });
+    }
+</script>
+</html>
