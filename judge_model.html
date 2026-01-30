@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算机网络判断题</title>
+    <link href="panduanstyle.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+    <!-- 左侧题号导航（每行3个） -->
+    <div class="question-nav" id="questionNav">
+        <div class="nav-title">题目导航（每行3个）</div>
+        <div class="nav-list" id="navList"></div>
+    </div>
+
+    <!-- 中间答题容器 -->
+    <div class="container">
+        <h1>PPT判断题</h1>
+        <a style="display: inline-block;align-items: center;justify-content: center;width: 80;height: 80;border: 3px solid #e5e7eb; border-radius: 6px;background-color: #ffffff; color: #374151;" href="index.html">返回主页</a>
+        <!-- 答题进度 -->
+        <div class="question-progress" id="questionProgress">当前：第1题 / 共15题</div>
+        
+        <!-- 判断题列表 -->
+        <div class="question-list" id="questionList">
+            
+
+        </div>
+
+        <!-- 底部按钮 -->
+        <button class="btn next-btn-bottom" id="nextBtnBottom">进入下一题</button>
+        <button class="btn submit-btn" id="submitAllBtn" style="display: none;">提交所有答案并查看统计结果</button>
+
+        <!-- 结果统计区域 -->
+        <div class="result-container" id="resultContainer">
+            <div class="result-title">闯关完成！答题统计</div>
+            <div class="result-info" id="totalCount">总答题数：0题</div>
+            <div class="result-info" id="correctCount">答对题数：0题</div>
+            <div class="result-info" id="accuracyRate">正确率：0%</div>
+        </div>
+
+        <!-- 右侧上下题按钮 -->
+        <div class="btn-sidebar" id="btnSidebar">
+            <button class="sidebar-btn prev-btn" id="prevBtn">↑</button>
+            <button class="sidebar-btn next-btn" id="sidebarNextBtn">↓</button>
+        </div>
+    </div>
+
+    <!-- 自定义提示框 -->
+    <div class="custom-tip" id="customTip">
+        <div class="tip-title" id="tipTitle"></div>
+        <div class="tip-content" id="tipContent"></div>
+        <button class="tip-confirm" id="tipConfirm">确定</button>
+    </div>
+
+    <script>
+        // 全局变量
+        let answerRecord = { total: 0, correct: 0 };
+        let currentQuestionIndex = 0;
+        let allQuestionCards = [];
+        let allNavItems = [];
+        const customTip = document.getElementById('customTip');
+        const prevBtn = document.getElementById('prevBtn');
+        const sidebarNextBtn = document.getElementById('sidebarNextBtn');
+        const nextBtnBottom = document.getElementById('nextBtnBottom');
+
+        // 页面加载完成初始化
+        window.onload = function() {
+            // 1. 初始化题目数据
+            allQuestionCards = Array.from(document.querySelectorAll('.question-card'));
+            answerRecord.total = allQuestionCards.length;
+            document.getElementById('totalCount').innerText = `总答题数：${answerRecord.total}题`;
+
+            // 2. 动态生成左侧题号导航（每行3个）
+            generateQuestionNav();
+
+            // 3. 显示第一题，更新状态
+            showCurrentQuestion();
+
+            // 4. 更新侧边按钮状态
+            updateSidebarBtnStatus();
+
+            // 5. 绑定判断题选项点击事件
+            bindJudgeOptionEvents();
+
+            // 6. 绑定提示框确定按钮
+            document.getElementById('tipConfirm').addEventListener('click', () => {
+                customTip.style.display = 'none';
+            });
+
+            // 7. 绑定底部下一题按钮
+            nextBtnBottom.addEventListener('click', () => {
+                goToNextQuestion();
+                nextBtnBottom.style.display = 'none';
+            });
+
+            // 8. 绑定右侧上下题按钮
+            prevBtn.addEventListener('click', goToPrevQuestion);
+            sidebarNextBtn.addEventListener('click', () => {
+                goToNextQuestion();
+                nextBtnBottom.style.display = 'none';
+            });
+
+            // 9. 绑定提交按钮事件
+            document.getElementById('submitAllBtn').addEventListener('click', submitResult);
+        };
+
+        // 生成左侧题号导航（每行3个）
+        function generateQuestionNav() {
+            const navList = document.getElementById('navList');
+            navList.innerHTML = '';
+
+            for (let i = 0; i < allQuestionCards.length; i++) {
+                const navItem = document.createElement('a');
+                navItem.className = 'nav-item';
+                navItem.dataset.index = i;
+                navItem.innerText = i + 1;
+
+                // 绑定题号跳转事件
+                navItem.addEventListener('click', () => {
+                    goToSpecificQuestion(parseInt(navItem.dataset.index));
+                });
+
+                navList.appendChild(navItem);
+                allNavItems.push(navItem);
+            }
+        }
+
+        // 绑定判断题选项事件
+        function bindJudgeOptionEvents() {
+            const allRadioInputs = document.querySelectorAll('input[type="radio"]');
+            allRadioInputs.forEach(input => {
+                input.addEventListener('change', function() {
+                    const currentQuestion = this.closest('.question-card');
+                    const questionId = currentQuestion.getAttribute('data-question-id');
+                    const answerInfo = currentQuestion.querySelector('.answer-info');
+                    const correctAnswer = answerInfo.getAttribute('data-correct-answer');
+                    const userAnswer = this.value;
+                    const analysis = answerInfo.innerText;
+
+                    // 禁用当前题所有选项
+                    disableCurrentQuestionOptions(currentQuestion);
+
+                    // 高亮对错选项
+                    highlightJudgeOption(currentQuestion, correctAnswer, userAnswer);
+
+                    // 显示解析
+                    showAnalysis(questionId, analysis);
+
+                    // 更新答题结果和题号样式
+                    updateAnswerResult(currentQuestion, userAnswer === correctAnswer, questionId - 1);
+
+                    // 显示提示框
+                    showTip(userAnswer === correctAnswer, correctAnswer);
+
+                    // 显示底部按钮（最后一题显示提交）
+                    if (currentQuestionIndex < allQuestionCards.length - 1) {
+                        nextBtnBottom.style.display = 'block';
+                    } else {
+                        document.getElementById('submitAllBtn').style.display = 'block';
+                    }
+                });
+            });
+        }
+
+        // 高亮判断题选项
+        function highlightJudgeOption(questionCard, correctAnswer, userAnswer) {
+            const judgeItems = questionCard.querySelectorAll('.judge-item');
+            judgeItems.forEach(item => {
+                const input = item.querySelector('input');
+                if (input.value === correctAnswer) {
+                    item.classList.add('correct');
+                } else if (input.value === userAnswer && userAnswer !== correctAnswer) {
+                    item.classList.add('incorrect');
+                }
+            });
+        }
+
+        // 显示解析
+        function showAnalysis(questionId, analysis) {
+            const analysisContent = document.getElementById(`analysisContent${questionId}`);
+            const analysisArea = document.getElementById(`analysis${questionId}`);
+            analysisContent.innerText = analysis;
+            analysisArea.style.display = 'block';
+        }
+
+        // 更新答题结果
+        function updateAnswerResult(questionCard, isCorrect, index) {
+            questionCard.setAttribute('data-is-correct', isCorrect);
+            if (isCorrect) {
+                allNavItems[index].classList.add('correct');
+                allNavItems[index].classList.remove('incorrect');
+            } else {
+                allNavItems[index].classList.add('incorrect');
+                allNavItems[index].classList.remove('correct');
+            }
+        }
+
+        // 显示提示框
+        function showTip(isCorrect, correctAnswer) {
+            const tipTitle = document.getElementById('tipTitle');
+            const tipContent = document.getElementById('tipContent');
+
+            customTip.className = 'custom-tip';
+            if (isCorrect) {
+                customTip.classList.add('correct-tip');
+                tipTitle.innerText = '回答正确！';
+                tipContent.innerText = '恭喜你，掌握了该知识点～';
+            } else {
+                customTip.classList.add('error-tip');
+                tipTitle.innerText = '回答错误';
+                tipContent.innerText = `正确答案是：${correctAnswer}，请仔细查看下方解析哦～`;
+            }
+            customTip.style.display = 'block';
+        }
+
+        // 跳转到指定题目
+        function goToSpecificQuestion(targetIndex) {
+            if (targetIndex < 0 || targetIndex >= allQuestionCards.length) return;
+
+            // 隐藏当前题
+            allQuestionCards[currentQuestionIndex].classList.remove('active');
+            allNavItems[currentQuestionIndex].classList.remove('active');
+
+            // 更新当前索引
+            currentQuestionIndex = targetIndex;
+
+            // 显示目标题
+            showCurrentQuestion();
+
+            // 更新侧边按钮状态
+            updateSidebarBtnStatus();
+
+            // 隐藏底部下一题按钮
+            nextBtnBottom.style.display = 'none';
+        }
+
+        // 跳转到上一题
+        function goToPrevQuestion() {
+            goToSpecificQuestion(currentQuestionIndex - 1);
+        }
+
+        // 跳转到下一题
+        function goToNextQuestion() {
+            goToSpecificQuestion(currentQuestionIndex + 1);
+        }
+
+        // 显示当前题目
+        function showCurrentQuestion() {
+            allQuestionCards[currentQuestionIndex].classList.add('active');
+            allNavItems[currentQuestionIndex].classList.add('active');
+
+            // 更新进度提示
+            document.getElementById('questionProgress').innerText = 
+                `当前：第${currentQuestionIndex + 1}题 / 共${answerRecord.total}题`;
+        }
+
+        // 更新侧边按钮状态
+        function updateSidebarBtnStatus() {
+            // 上一题按钮
+            if (currentQuestionIndex === 0) {
+                prevBtn.classList.remove('enabled');
+            } else {
+                prevBtn.classList.add('enabled');
+            }
+
+            // 下一题按钮
+            if (currentQuestionIndex === allQuestionCards.length - 1) {
+                sidebarNextBtn.classList.remove('enabled');
+            } else {
+                sidebarNextBtn.classList.add('enabled');
+            }
+        }
+
+        // 禁用当前题选项
+        function disableCurrentQuestionOptions(questionCard) {
+            const radioInputs = questionCard.querySelectorAll('input[type="radio"]');
+            radioInputs.forEach(radio => radio.disabled = true);
+        }
+
+        // 提交结果并统计
+        function submitResult() {
+            // 统计答对题数
+            answerRecord.correct = 0;
+            allQuestionCards.forEach(card => {
+                if (card.getAttribute('data-is-correct') === 'true') {
+                    answerRecord.correct++;
+                }
+            });
+
+            // 计算正确率
+            const accuracy = answerRecord.total > 0 
+                ? ((answerRecord.correct / answerRecord.total) * 100).toFixed(2) 
+                : '0.00';
+
+            // 更新统计结果
+            document.getElementById('correctCount').innerText = `答对题数：${answerRecord.correct}题`;
+            document.getElementById('accuracyRate').innerText = `正确率：${accuracy}%`;
+            document.getElementById('resultContainer').style.display = 'block';
+
+            // 显示最终提示框
+            showTip(true, '');
+            document.getElementById('tipTitle').innerText = '闯关完成！';
+            document.getElementById('tipContent').innerText = 
+                `总题数：${answerRecord.total}题\n答对题数：${answerRecord.correct}题\n正确率：${accuracy}%`;
+        }
+    </script>
+</body>
+</html>
