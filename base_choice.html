@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息技术基础习题闯关系统</title>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <!-- 新增：左侧题号导航栏 -->
+    <div class="question-nav" id="questionNav">
+        <div class="nav-title">题目导航</div>
+        <div class="nav-list" id="navList">
+            <!-- 题号将通过JS动态生成 -->
+        </div>
+    </div>
+    <div class="container">
+        <h1>信息技术基础选择练习</h1>
+        <a style="display: inline-block;align-items: center;justify-content: center;width: 80;height: 80;border: 3px solid #e5e7eb; border-radius: 6px;background-color: #ffffff; color: #374151;" href="index.html">返回主页</a>
+        <!-- 答题进度提示 -->
+        <div class="question-progress" id="questionProgress">当前：第1题 / 共25题</div>
+        
+        <!-- 题目列表：带图题目预留图片标签 -->
+        <div class="question-list" id="questionList">
+            <!-- 题目1 -->
+            <div class="question-card" data-question-id="1">
+                <div class="question-title">1.下图为莫尔斯电码表，我们可以使用二进制数中的 “0” 和 “1” 来分别表示 “・” 和 “—”。那么不明飞行物 “UFO” 字母的二进制数描述是（ ）。</div>
+               <img src="images/base_choice_1.png" class="" style="width: 260px;"/>
+                <div class="option-item">
+                    <input type="radio" name="q1" value="A" id="q1a">
+                    <label for="q1a">A. 0010010111</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q1" value="B" id="q1b">
+                    <label for="q1b">B. 0011110010</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q1" value="C" id="q1c">
+                    <label for="q1c">C. 00100001111</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q1" value="D" id="q1d">
+                    <label for="q1d">D. 1110010001</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="A"> 
+                    解析：按照题目规则：0 表示・，1 表示—。<br>
+                    对照莫尔斯电码表：<br>
+                    U：・・— → 001<br>
+                    F：・—・・ → 0100<br>
+                    O：——— → 111<br>
+                    连起来：001 0100 111 → 0010010111，对应选项 A。
+                </div>
+                <div class="analysis-area" id="analysis1">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent1"></div>
+                </div>
+            </div>
+            <!-- 题目2 -->
+            <div class="question-card" data-question-id="2">
+                <div class="question-title">2.如图所示，下列关于某电脑的系统属性描述错误的是（ ）。</div>
+                <img src="images/base_choice_2.png" style="width: 260px;" />
+                <div class="option-item">
+                    <input type="radio" name="q2" value="A" id="q2a">
+                    <label for="q2a">A. 该电脑的CPU主频是3.00GHz </label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q2" value="B" id="q2b">
+                    <label for="q2b">B. 该电脑的硬盘转速是8500</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q2" value="C" id="q2c">
+                    <label for="q2c">C. 该电脑的系统类型是64位</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q2" value="D" id="q2d">
+                    <label for="q2d">D. 该电脑的内存是2GB</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="B"> 
+                    解析：
+                    1. A 正确：处理器一栏中 3.00GHz 是 CPU 的主频。
+                    2. B 错误：i5-8500 是 Intel CPU 型号，和硬盘转速无关。
+                    3. C 正确：系统类型明确显示为 64 位操作系统。
+                    4. D 正确：安装内存（RAM）为 2.00GB。
+                </div>
+                <div class="analysis-area" id="analysis2">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent2"></div>
+                </div>
+            </div>
+            <!-- 题目3 -->
+            <div class="question-card" data-question-id="3">
+                <div class="question-title">3.杀毒软件对于计算机安全至关重要，下列关于杀毒软件的说法，正确的是（ ）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q3" value="A" id="q3a">
+                    <label for="q3a">A. 杀毒软件查杀过一次病毒后就会对病毒免疫，无需再升级</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q3" value="B" id="q3b">
+                    <label for="q3b">B. 杀毒软件要经常升级并更新病毒库</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q3" value="C" id="q3c">
+                    <label for="q3c">C. 杀毒软件查杀病毒的过程就是将计算机重装的过程</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q3" value="D" id="q3d">
+                    <label for="q3d">D. 只要被杀毒软件查杀出来的文件都是病毒</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="B"> 
+                    解析：
+                    A 错误：新病毒不断出现，只查一次不能永久免疫，必须定期升级。
+                    B 正确：杀毒软件需要经常更新病毒库，才能识别最新病毒，保障安全。
+                    C 错误：查杀病毒是清理恶意程序，不会重装系统，二者完全不同。
+                    D 错误：查杀出来的可能是可疑文件、风险程序，不一定都是病毒。
+                </div>
+                <div class="analysis-area" id="analysis3">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent3"></div>
+                </div>
+            </div>
+            <!-- 题目4 -->
+            <div class="question-card" data-question-id="4">
+                <div class="question-title">4.下列目录中，不可以同时存放两个相同类型且文件名相同的文件是（ ）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q4" value="A" id="q4a">
+                    <label for="q4a">A. 同一磁盘，同一目录</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q4" value="B" id="q4b">
+                    <label for="q4b">B. 同一磁盘，不同目录</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q4" value="C" id="q4c">
+                    <label for="q4c">C. 不同磁盘，同名目录</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q4" value="D" id="q4d">
+                    <label for="q4d">D. 不同磁盘，不同目录</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="A"> 
+                    解析：
+                    A 正确：在**同一个文件夹（同一目录）**里，不允许存在文件名完全相同的两个文件。
+                    B、C、D 错误：只要不在同一个目录下，即使文件名相同，系统也可以正常区分和保存。
+                </div>
+                <div class="analysis-area" id="analysis4">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent4"></div>
+                </div>
+            </div>
+            <!-- 题目5 -->
+            <div class="question-card" data-question-id="5">
+                <div class="question-title">5.某计算机的部分配置信息如下图所示，从中不能获取的信息是（ ）。</div>
+                <img src="images/base_choice_5.png" style="width: 260px;" />
+                <div class="option-item">
+                    <input type="radio" name="q5" value="A" id="q5a">
+                    <label for="q5a">A. 硬盘的容量</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q5" value="B" id="q5b">
+                    <label for="q5b">B. CPU 的型号</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q5" value="C" id="q5c">
+                    <label for="q5c">C. CPU 的主频</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q5" value="D" id="q5d">
+                    <label for="q5d">D. 内存的容量</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="A"> 
+                    解析：
+                    A 选项：图中没有任何关于硬盘容量的信息，因此无法获取。
+                    B 选项：从 “处理器” 一栏可以获取 CPU 型号为 Intel(R) Core(TM) i5-8500。
+                    C 选项：从 “处理器” 一栏可以获取 CPU 主频为 3.00GHz。
+                    D 选项：从 “安装内存 (RAM)” 一栏可以获取内存容量为 2.00 GB。
+                </div>
+                <div class="analysis-area" id="analysis5">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent5"></div>
+                </div>
+            </div>
+            <!-- 题目6 -->
+            <div class="question-card" data-question-id="6">
+                <div class="question-title">6.下列关于计算机解决问题的说法，正确的是（ ）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q6" value="A" id="q6a">
+                    <label for="q6a">A. 计算机解决问题和人类解决问题的过程是完全相同的</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q6" value="B" id="q6b">
+                    <label for="q6b">B. 计算机和人类一样也会创造性地解决问题</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q6" value="C" id="q6c">
+                    <label for="q6c">C. 计算机解决问题必须针对一定对象，按一定步骤去做</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q6" value="D" id="q6d">
+                    <label for="q6d">D. 计算机的思维有跳跃性、抽象性、模糊性</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="C"> 
+                    解析：
+                    A 错误：计算机按程序执行，与人的思维过程不同。
+                    B 错误：计算机没有自主创造能力，只能按指令执行。
+                    C 正确：计算机必须按照设定的步骤、算法来解决问题。
+                    D 错误：计算机只有精确、逻辑化的执行方式，没有模糊、跳跃思维。
+                </div>
+                <div class="analysis-area" id="analysis6">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent6"></div>
+                </div>
+            </div>
+            <!-- 题目7 -->
+            <div class="question-card" data-question-id="7">
+                <div class="question-title">7.下列事例中，主要体现信息 “真伪性” 特征的是（ ）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q7" value="A" id="q7a">
+                    <label for="q7a">A. 结绳记事</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q7" value="B" id="q7b">
+                    <label for="q7b">B. 空城计</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q7" value="C" id="q7c">
+                    <label for="q7c">C. 飞鸽传书</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q7" value="D" id="q7d">
+                    <label for="q7d">D. 烽火告急</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="B"> 
+                    解析：
+                    A 错误：结绳记事体现信息的**载体依附性**。
+                    B 正确：空城计是故意传递虚假信息，体现信息的**真伪性**。
+                    C 错误：飞鸽传书体现信息的**传递性**。
+                    D 错误：烽火告急体现信息的**传递性**。
+                </div>
+                <div class="analysis-area" id="analysis7">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent7"></div>
+                </div>
+            </div>
+            <!-- 题目8 -->
+            <div class="question-card" data-question-id="8">
+                <div class="question-title">8.通过下表可以推测 12 的二进制数为（ ）。</div>
+                <img src="images/base_choice_8.png" style="width: 260px;" />
+                <div class="option-item">
+                    <input type="radio" name="q8" value="A" id="q8a">
+                    <label for="q8a">A. 0100</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q8" value="B" id="q8b">
+                    <label for="q8b">B. 1001</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q8" value="C" id="q8c">
+                    <label for="q8c">C. 1000</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q8" value="D" id="q8d">
+                    <label for="q8d">D. 1100</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="D"> 
+                解析：十进制数 12 转换成二进制是 1100，因此选 D。
+                </div>
+                <div class="analysis-area" id="analysis8">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent8"></div>
+                </div>
+            </div>
+            <!-- 题目9 -->
+            <div class="question-card" data-question-id="9">
+                <div class="question-title">9.以下不属于计算机外存储设备的是（ ）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q9" value="A" id="q9a">
+                    <label for="q9a">A. <img src="images/base_choice_9_A.png"/></label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q9" value="B" id="q9b">
+                    <label for="q9b">B. <img src="images/base_choice_9_B.png"/></label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q9" value="C" id="q9c">
+                    <label for="q9c">C. <img src="images/base_choice_9_C.png"/></label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q9" value="D" id="q9d">
+                    <label for="q9d">D. <img src="images/base_choice_9_D.png" style="width: 200px;"/></label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="A"> 
+                    解析：
+                    A 答案内存条属于**内存储器**，硬盘、U盘、光盘都属于外存储设备。
+                </div>
+                <div class="analysis-area" id="analysis9">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent9"></div>
+                </div>
+            </div>
+            <!-- 题目10 -->
+            <div class="question-card" data-question-id="10">
+                <div class="question-title">10.在计算机中，可以使用 16 个二进制位来表示（ ）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q10" value="A" id="q10a">
+                    <label for="q10a">A. 一个汉字</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q10" value="B" id="q10b">
+                    <label for="q10b">B. 一个字节</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q10" value="C" id="q10c">
+                    <label for="q10c">C. 一个数字</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q10" value="D" id="q10d">
+                    <label for="q10d">D. 一个字母</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="A"> 
+                    解析：
+                    A 正确：一个汉字通常用 16 个二进制位（2 字节）表示。
+                    B 错误：1 个字节 = 8 个二进制位。
+                    C、D 错误：一个数字或字母一般只占 1 字节（8 位）。
+                </div>
+                <div class="analysis-area" id="analysis10">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent10"></div>
+                </div>
+            </div>
+            <!-- 题目11 -->
+            <div class="question-card" data-question-id="11">
+                <div class="question-title">11.2021 年 7 月 1 日上午 8 时，庆祝中国共产党成立 100 周年大会在北京天安门广场隆重举行。全国人民都能够通过电视、广播及网络直播等形式及时了解大会的实时动态，这主要体现的信息特征是（ ）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q11" value="A" id="q11a">
+                    <label for="q11a">A. 共享性</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q11" value="B" id="q11b">
+                    <label for="q11b">B. 价值相对性</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q11" value="C" id="q11c">
+                    <label for="q11c">C. 载体依附性</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q11" value="D" id="q11d">
+                    <label for="q11d">D. 真伪性</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="A"> 
+                    解析：
+                    A 正确：全国人民通过多种方式同时获取大会信息，体现信息可以被多人共同使用，即**共享性**。
+                    B 错误：价值相对性指信息对不同人价值不同，本题未体现。
+                    C 错误：载体依附性指信息要依附于媒体存在，不是本题主要体现的特征。
+                    D 错误：真伪性指信息有真有假，本题未体现。
+                </div>
+                <div class="analysis-area" id="analysis11">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent11"></div>
+                </div>
+            </div>
+            <!-- 题目12 -->
+            <div class="question-card" data-question-id="12">
+                <div class="question-title">12.如图所示，小云电脑桌面上充满了杂乱无章的各种资料，为方便查找，小云对这些资料进行了归类整理。以下说法正确的是（ ）。</div>
+                <img src="images/base_choice_12.png" style="width: 240px;" />
+                <div class="option-item">
+                    <input type="radio" name="q12" value="A" id="q12a">
+                    <label for="q12a">A. 新建图片、演示文稿、音频、视频、动画文件夹，将文件分别移动到相应的文件夹中</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q12" value="B" id="q12b">
+                    <label for="q12b">B. 在桌面上新建临时文件夹，将文件移动到文件夹中</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q12" value="C" id="q12c">
+                    <label for="q12c">C. 以各个文件的文件名创建文件夹，将文件移动到相应的文件夹中</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q12" value="D" id="q12d">
+                    <label for="q12d">D. 将这些文件移动到 C 盘新建的 “小云” 文件夹中</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="A"> 
+                    解析：
+                    A 正确：按照文件类型（图片、音频、视频、文档等）分类整理，是最科学、方便查找的方法。
+                    B 错误：只建一个临时文件夹，没有分类，依然不方便查找。
+                    C 错误：按每个文件名建文件夹，工作量大且没有归类意义。
+                    D 错误：只移动不分类，文件依然混乱，达不到整理效果。
+                </div>
+                <div class="analysis-area" id="analysis12">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent12"></div>
+                </div>
+            </div>
+            <!-- 题目13 -->
+            <div class="question-card" data-question-id="13">
+                <div class="question-title">13.在新能源汽车上，对汽车中控屏说出目的地，导航系统自动查找目的地并规划出合适的导航路线，这其中主要应用了人工智能中的（ ）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q13" value="A" id="q13a">
+                    <label for="q13a">A. 人脸识别技术</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q13" value="B" id="q13b">
+                    <label for="q13b">B. 指纹识别技术</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q13" value="C" id="q13c">
+                    <label for="q13c">C. 语音识别技术</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q13" value="D" id="q13d">
+                    <label for="q13d">D. 图像识别技术</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="C"> 
+                    解析：
+                    A 错误：人脸识别是通过面部特征识别身份。
+                    B 错误：指纹识别是通过指纹特征验证身份。
+                    C 正确：通过说话让系统识别内容，属于**语音识别技术**。
+                    D 错误：图像识别是对图片、画面中的内容进行识别。
+                </div>
+                <div class="analysis-area" id="analysis13">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent13"></div>
+                </div>
+            </div>
+            <!-- 题目14 -->
+            <div class="question-card" data-question-id="14">
+                <div class="question-title">14.假期返校准备期间，班主任老师在钉钉群中发布了学生健康监测表，让家长们每天填写学生的健康状况，老师收集学生健康状况的过程属于（ ）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q14" value="A" id="q14a">
+                    <label for="q14a">A. 信息采集</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q14" value="B" id="q14b">
+                    <label for="q14b">B. 信息存储</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q14" value="C" id="q14c">
+                    <label for="q14c">C. 信息处理</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q14" value="D" id="q14d">
+                    <label for="q14d">D. 信息加工</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="A"> 
+                    解析：
+                    A 正确：收集、获取信息的过程叫做**信息采集**。
+                    B 错误：信息存储是把信息保存起来。
+                    C、D 错误：信息处理、信息加工是对收集到的信息进行整理、分析等。
+                </div>
+                <div class="analysis-area" id="analysis14">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent14"></div>
+                </div>
+            </div>
+            <!-- 题目15 -->
+            <div class="question-card" data-question-id="15">
+                <div class="question-title">15.下列使用信息技术的行为中，合理合法的是（ ）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q15" value="A" id="q15a">
+                    <label for="q15a">A. 入侵他人的电脑但是不窃取里面的内容</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q15" value="B" id="q15b">
+                    <label for="q15b">B. 将含有病毒的电子邮件转发给同班同学</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q15" value="C" id="q15c">
+                    <label for="q15c">C. 编写计算机病毒并上传到互联网</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q15" value="D" id="q15d">
+                    <label for="q15d">D. 将计算机密码设置成复杂的密码</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="D"> 
+                    解析：
+                    A 错误：入侵他人电脑属于违法行为。
+                    B 错误：传播病毒会危害他人计算机安全，是不道德且违规的行为。
+                    C 错误：制作、传播计算机病毒是违法违规行为。
+                    D 正确：设置复杂密码可以保护账户安全，是合理合法的行为。
+                </div>
+                <div class="analysis-area" id="analysis15">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent15"></div>
+                </div>
+            </div>
+            <!-- 题目16 -->
+            <div class="question-card" data-question-id="16">
+                <div class="question-title">16.下图中，图像文件的数量是（ ）。</div>
+                <img src="images/base_choice_16.png" style="width: 260px;" />
+                <div class="option-item">
+                    <input type="radio" name="q16" value="A" id="q16a">
+                    <label for="q16a">A. 4 个</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q16" value="B" id="q16b">
+                    <label for="q16b">B. 3 个</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q16" value="C" id="q16c">
+                    <label for="q16c">C. 2 个</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q16" value="D" id="q16d">
+                    <label for="q16d">D. 1 个</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="A"> 
+                    解析：常见的图像文件格式有 .jpg、.bmp、.png、.gif 等。<br>
+                    图像文件：湖.jpg、清明.jpg、夏至.jpg、游泳.bmp，共 4 个。
+                </div>
+                <div class="analysis-area" id="analysis16">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent16"></div>
+                </div>
+            </div>
+            <!-- 题目17 -->
+            <div class="question-card" data-question-id="17">
+                <div class="question-title">17.2021 年 6 月 17 日 9 时 22 分，搭载神舟十二号载人飞船的长征二号 F 遥十二运载火箭，在酒泉卫星发射中心准时点火发射。在神舟十二号载人飞船与天和核心舱成功实现自主快速交会对接后，航天员乘组从返回舱进入轨道舱。北京时间 2021 年 6 月 17 日 18 时 48 分，航天员聂海胜、刘伯明、汤洪波先后进入天和核心舱，标志着中国人首次进入自己的空间站。中国空间站是（ ）的产物。</div>
+                <div class="option-item">
+                    <input type="radio" name="q17" value="A" id="q17a">
+                    <label for="q17a">A. 第一次信息技术革命</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q17" value="B" id="q17b">
+                    <label for="q17b">B. 第三次信息技术革命</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q17" value="C" id="q17c">
+                    <label for="q17c">C. 第四次信息技术革命</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q17" value="D" id="q17d">
+                    <label for="q17d">D. 第五次信息技术革命</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="D"> 
+                    解析：
+                    <img src="images/base_choice_17.png" style="width: 260px;"/>
+                    第五次信息技术革命是以计算机与网络的普及应用为标志，航天工程、空间站等高科技都属于第五次信息技术革命的产物。
+                </div>
+                <div class="analysis-area" id="analysis17">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent17"></div>
+                </div>
+            </div>
+            <!-- 题目18 -->
+            <div class="question-card" data-question-id="18">
+                <div class="question-title">18.陈雨同学购买了一台笔记本，为了保护笔记本不受病毒的侵害，以下做法最合理的是（ ）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q18" value="A" id="q18a">
+                    <label for="q18a">A. 将软件市场中的免费杀毒软件都安装一遍</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q18" value="B" id="q18b">
+                    <label for="q18b">B. 安装杀毒软件并及时更新病毒库</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q18" value="C" id="q18c">
+                    <label for="q18c">C. 只有在接收文件和使用 U 盘时才需要开启杀毒软件</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q18" value="D" id="q18d">
+                    <label for="q18d">D. 只在笔记本电脑连接互联网时才需要开启杀毒软件</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="B"> 
+                    解析：
+                    A 错误：安装多个杀毒软件会互相冲突，影响电脑运行。
+                    B 正确：安装正规杀毒软件并及时更新病毒库，是最有效、合理的防护方法。
+                    C 错误：杀毒软件需要长期开启，才能实时防护。
+                    D 错误：不联网时 U 盘、移动硬盘也可能带病毒，需要一直防护。
+                </div>
+                <div class="analysis-area" id="analysis18">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent18"></div>
+                </div>
+            </div>
+            <!-- 题目19 -->
+            <div class="question-card" data-question-id="19">
+                <div class="question-title">19.在进行计算机的 IP 设置时，下列 IP 地址能够正常配置的是（ ）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q19" value="A" id="q19a">
+                    <label for="q19a">A. 172.3.50.257</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q19" value="B" id="q19b">
+                    <label for="q19b">B. 192.168.10.55</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q19" value="C" id="q19c">
+                    <label for="q19c">C. 172:168:0:156</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q19" value="D" id="q19d">
+                    <label for="q19d">D. 127,1,1,0</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="B"> 
+                    解析：
+                    A 错误：IP 地址每段范围是 0～255，257 超出范围。<br>
+                    B 正确：格式正确，每段数值合法。<br>
+                    C 错误：分隔符必须是点（.），不能用冒号。<br>
+                    D 错误：分隔符必须是点（.），不能用逗号。
+                </div>
+                <div class="analysis-area" id="analysis19">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent19"></div>
+                </div>
+            </div>
+            <!-- 题目20 -->
+            <div class="question-card" data-question-id="20">
+                <div class="question-title">20.某电视台法治栏目中播放的电信诈骗套路视频主要体现的信息特征是（ ）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q20" value="A" id="q20a">
+                    <label for="q20a">A. 时效性</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q20" value="B" id="q20b">
+                    <label for="q20b">B. 共享性</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q20" value="C" id="q20c">
+                    <label for="q20c">C. 传递性</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q20" value="D" id="q20d">
+                    <label for="q20d">D. 真伪性</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="D"> 
+                    解析：
+                    电信诈骗是利用虚假信息骗人，法治视频揭露真假信息，主要体现信息的**真伪性**。
+                </div>
+                <div class="analysis-area" id="analysis20">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent20"></div>
+                </div>
+            </div>
+            <!-- 题目21 -->
+            <div class="question-card" data-question-id="21">
+                <div class="question-title">21.关于文件与文件夹的操作，下列说法正确的是（ ）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q21" value="A" id="q21a">
+                    <label for="q21a">A. 若要使文件的内容不可更改，可以勾选文件的隐藏属性</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q21" value="B" id="q21b">
+                    <label for="q21b">B. 删除文件夹只会删除文件夹中的子文件夹，文件不会被删除</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q21" value="C" id="q21c">
+                    <label for="q21c">C. 活动窗口只有一个，所以一次只能打开一个文件夹</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q21" value="D" id="q21d">
+                    <label for="q21d">D. 在文件夹窗口中，按住 ctrl 键可以选择不连续的文件</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="D"> 
+                    解析：
+                    A 错误：隐藏属性只是看不见，不能防止内容被修改。
+                    B 错误：删除文件夹会把里面所有文件和子文件夹一起删除。
+                    C 错误：可以同时打开多个文件夹，只是活动窗口只有一个。
+                    D 正确：按住 Ctrl 键可以用鼠标点选多个不连续的文件。
+                </div>
+                <div class="analysis-area" id="analysis21">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent21"></div>
+                </div>
+            </div>
+            <!-- 题目22 -->
+            <div class="question-card" data-question-id="22">
+                <div class="question-title">22.洋洋想制作一个介绍中国传统习俗的演示文稿，他在网上收集了如下素材，这些素材中包含了（ ）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q22" value="A" id="q22a">
+                    <label for="q22a">A. 2 个图片文件，2 个视频文件</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q22" value="B" id="q22b">
+                    <label for="q22b">B. 3 个视频文件，2 个音频文件</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q22" value="C" id="q22c">
+                    <label for="q22c">C. 2 个图片文件，3 个音频文件</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q22" value="D" id="q22d">
+                    <label for="q22d">D. 2 个文档文件，1 个图片文件</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="C"> 
+                    解析：
+                    图片文件：划龙舟.jpg、中秋节.bmp → 共 2 个<br>
+                    视频文件：乞巧节.mp4 → 共 1 个<br>
+                    音频文件：故事.wma、简介.wav、新年好.mp3 → 共 3 个<br>
+                    因此正确答案是 C：2 个图片文件，3 个音频文件。
+                </div>
+                <div class="analysis-area" id="analysis22">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent22"></div>
+                </div>
+            </div>
+            <!-- 题目23 -->
+            <div class="question-card" data-question-id="23">
+                <div class="question-title">23.如图所示，红色横线标识的字符属于计算机的（ ）。</div>
+                <img src="images/base_choice_23.png" style="width: 260px;"/>
+                <div class="option-item">
+                    <input type="radio" name="q23" value="A" id="q23a">
+                    <label for="q23a">A. MAC 地址</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q23" value="B" id="q23b">
+                    <label for="q23b">B. IP 地址</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q23" value="C" id="q23c">
+                    <label for="q23c">C. 子网掩码</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q23" value="D" id="q23d">
+                    <label for="q23d">D. 域名</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="A"> 
+                    解析：
+                    A 选项：图中红色横线标识的 “00-50-56-C0-00-01”，是由 12 个十六进制字符组成，并用短横线分隔的地址，这是 ** 物理地址（MAC 地址）** 的典型格式。
+                    B 选项：IP 地址（如 192.168.163.1）是由 4 个十进制数组成，并用点号分隔。
+                    C 选项：子网掩码（如 255.255.255.0）同样是点分十进制格式。
+                    D 选项：域名是由字母、数字和点号组成的字符串（如www.example.com）。                 
+                </div>
+                <div class="analysis-area" id="analysis23">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent23"></div>
+                </div>
+            </div>
+            <!-- 题目24 -->
+            <div class="question-card" data-question-id="24">
+                <div class="question-title">24.下图是某笔记本的参数截图，从中可以看出该笔记本的操作系统为（ ）。</div>
+                <img src="images/base_choice_24.png" style="width: 260px;"/>
+                <div class="option-item">
+                    <input type="radio" name="q24" value="A" id="q24a">
+                    <label for="q24a">A. Windows 11</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q24" value="B" id="q24b">
+                    <label for="q24b">B. 2TB SSD</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q24" value="C" id="q24c">
+                    <label for="q24c">C. 1TB SSD</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q24" value="D" id="q24d">
+                    <label for="q24d">D. 802.11ax</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="A"> 
+                    解析：
+                    Windows 11 是操作系统；2TB SSD、1TB SSD 是硬盘；802.11ax 是无线网络标准。
+                </div>
+                <div class="analysis-area" id="analysis24">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent24"></div>
+                </div>
+            </div>
+            <!-- 题目25 -->
+            <div class="question-card" data-question-id="25">
+                <div class="question-title">25.目前，大部分智能电视都支持遥控器语音输入搜索并打开相应节目，其主要应用的技术是（ ）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q25" value="A" id="q25a">
+                    <label for="q25a">A. 语音识别技术</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q25" value="B" id="q25b">
+                    <label for="q25b">B. 虚拟现实技术</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q25" value="C" id="q25c">
+                    <label for="q25c">C. 传感技术</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q25" value="D" id="q25d">
+                    <label for="q25d">D. 生物芯片技术</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="A"> 
+                    解析：
+                    用语音控制、让设备听懂说话，主要应用的是**语音识别技术**。
+                </div>
+                <div class="analysis-area" id="analysis25">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent25"></div>
+                </div>
+            </div>
+            <!-- 题目26 -->
+            <div class="question-card" data-question-id="26">
+                <div class="question-title">26.在如图所示的窗口中输入 “ping www.ebay.cn” 的命令，下列关于运行的结果说法正确的是（ ）。</div>
+                <img src="images/base_choice_26.png" style="width: 260px;"/>
+                <div class="option-item">
+                    <input type="radio" name="q26" value="A" id="q26a">
+                    <label for="q26a">A. 本机 IP 地址是 222.73.220.176</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q26" value="B" id="q26b">
+                    <label for="q26b">B. 不需要接入互联网也能输出以上结果</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q26" value="C" id="q26c">
+                    <label for="q26c">C. 域名 “www.ebay.cn” 对应的 IP 地址是 222.73.220.176</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q26" value="D" id="q26d">
+                    <label for="q26d">D. ping 命令后面只能输入域名</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="C"> 
+                    解析：
+                    A 错误：222.73.220.176 是目标域名的IP，不是本机IP。<br>
+                    B 错误：ping 命令需要联网才能和目标服务器通信，无网络无法得到结果。<br>
+                    C 正确：从 “正在 Ping www.ebay.cn [222.73.220.176]” 可确定该域名对应的IP是222.73.220.176。<br>
+                    D 错误：ping 命令后可输入域名，也可直接输入IP地址。
+                </div>
+                <div class="analysis-area" id="analysis26">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent26"></div>
+                </div>
+            </div>  
+            <!-- 题目27 -->
+            <div class="question-card" data-question-id="27">
+                <div class="question-title">27.下图所示的是自助照相复印一体机，它可以实现电子证件的拍摄和打印，也可以复印打印资料，这种设备属于（ ）。</div>
+                <img src="images/base_choice_27.png" style="width: 260px;"/>
+                <div class="option-item">
+                    <input type="radio" name="q27" value="A" id="q27a">
+                    <label for="q27a">A. 自动化设备</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q27" value="B" id="q27b">
+                    <label for="q27b">B. 输出设备</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q27" value="C" id="q27c">
+                    <label for="q27c">C. 输入设备</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q27" value="D" id="q27d">
+                    <label for="q27d">D. 输出设备，也是输入设备</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="D"> 
+                    解析：
+                    拍摄、扫描属于**输入**，打印属于**输出**，因此该设备既是输入设备也是输出设备。
+                </div>
+                <div class="analysis-area" id="analysis27">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent27"></div>
+                </div>
+            </div>
+            <!-- 题目28 -->
+            <div class="question-card" data-question-id="28">
+                <div class="question-title">28.为了提高计算机安全性，下列做法恰当的是（ ）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q28" value="A" id="q28a">
+                    <label for="q28a">A. 每周给计算机重装系统</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q28" value="B" id="q28b">
+                    <label for="q28b">B. 随意打开陌生人发来的邮件链接</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q28" value="C" id="q28c">
+                    <label for="q28c">C. 及时更新系统补丁，修复系统漏洞</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q28" value="D" id="q28d">
+                    <label for="q28d">D. 断开计算机的外网连接</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="C"> 
+                    解析：
+                    A 错误：频繁重装系统会损坏硬盘、丢失数据，不是合理做法。
+                    B 错误：陌生链接可能带病毒或钓鱼网站，不能随意打开。
+                    C 正确：及时更新补丁、修复漏洞，能有效提高系统安全性。
+                    D 错误：断开外网会影响正常使用，不是恰当的安全措施。
+                </div>
+                <div class="analysis-area" id="analysis28">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent28"></div>
+                </div>
+            </div>
+            <!-- 题目29 -->
+            <div class="question-card" data-question-id="29">
+                <div class="question-title">29.下列使用计算机网络的行为中，不恰当的是（ ）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q29" value="A" id="q29a">
+                    <label for="q29a">A. 在公共计算机上登录个人账号时选择记住密码</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q29" value="B" id="q29b">
+                    <label for="q29b">B. 不随意将自己的证件扫描件发送给别人</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q29" value="C" id="q29c">
+                    <label for="q29c">C. 接收文件时先用杀毒软件对文件进行查杀再打开</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q29" value="D" id="q29d">
+                    <label for="q29d">D. 从官方网站下载应用软件安装使用</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="A"> 
+                    解析：
+                    A 不恰当：公共电脑上记住密码，极易造成账号被盗、隐私泄露。
+                    B 恰当：保护个人重要信息，防止身份被冒用。
+                    C 恰当：先查杀再打开，可有效防范病毒、木马。
+                    D 恰当：从官网下载软件，能避免捆绑插件与恶意程序。
+                </div>
+                <div class="analysis-area" id="analysis29">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent29"></div>
+                </div>
+            </div>
+            <!-- 题目30 -->
+            <div class="question-card" data-question-id="30">
+                <div class="question-title">30.2021 年 6 月 23 日，习近平总书记来到北京航天飞行控制中心，同航天员聂海胜、刘伯明、汤洪波天地通话。“天地通话” 主要是（ ）在科技领域中的应用。</div>
+                <div class="option-item">
+                    <input type="radio" name="q30" value="A" id="q30a">
+                    <label for="q30a">A. 微电子技术</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q30" value="B" id="q30b">
+                    <label for="q30b">B. 多媒体技术</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q30" value="C" id="q30c">
+                    <label for="q30c">C. 通信技术</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q30" value="D" id="q30d">
+                    <label for="q30d">D. 虚拟现实技术</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="C"> 
+                    解析：
+                    A 错误：微电子技术是硬件基础，并非天地通话的核心应用。
+                    B 错误：多媒体技术负责音视频处理，不是信息传输的核心。
+                    C 正确：天地通话依靠卫星、地面站的通信链路传输音视频，核心是通信技术。
+                    D 错误：虚拟现实技术用于构建虚拟场景，与实时通话无关。
+                </div>
+                <div class="analysis-area" id="analysis30">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent30"></div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- 下一题按钮（答题完成后显示） -->
+        <button class="btn next-btn" id="nextBtn">进入下一题</button>
+
+        <!-- 提交结果按钮（最后一题答题完成后显示） -->
+        <button class="btn submit-btn" id="submitAllBtn" style="display: none;">提交所有答案并查看统计结果</button>
+
+        <!-- 结果统计区域 -->
+        <div class="result-container" id="resultContainer">
+            <div class="result-title">闯关完成！答题统计</div>
+            <div class="result-info" id="totalCount">总答题数：0题</div>
+            <div class="result-info" id="correctCount">答对题数：0题</div>
+            <div class="result-info" id="accuracyRate">正确率：0%</div>
+        </div>
+
+        <!-- 新增：右侧上下题按钮容器 -->
+        <div class="btn-sidebar" id="btnSidebar">
+            <button class="sidebar-btn prev-btn" id="prevBtn">↑</button>
+            <button class="sidebar-btn next-btn" id="sidebarNextBtn">↓</button>
+        </div>
+    </div>
+
+    <!-- 新增：自定义提示框（全局唯一） -->
+    <div class="custom-tip" id="customTip">
+        <div class="tip-title" id="tipTitle"></div>
+        <div class="tip-content" id="tipContent"></div>
+        <button class="tip-confirm" id="tipConfirm">确定</button>
+    </div>
+</body>
+<script>
+    // 全局变量
+    let answerRecord = {
+        total: 0, // 总题数
+        correct: 0 // 答对题数
+    };
+    let currentQuestionIndex = 0; // 当前显示的题目索引（从0开始）
+    let allQuestionCards = []; // 所有题目卡片集合
+    let allNavItems = []; // 所有导航题号元素集合
+    const customTip = document.getElementById('customTip'); // 自定义提示框实例
+    const prevBtn = document.getElementById('prevBtn'); // 左侧上一题按钮
+    const sidebarNextBtn = document.getElementById('sidebarNextBtn'); // 右侧下一题按钮
+
+    // 页面加载完成后初始化功能
+    window.onload = function() {
+        // 1. 初始化变量，获取所有题目卡片
+        allQuestionCards = Array.from(document.querySelectorAll('.question-card'));
+        answerRecord.total = allQuestionCards.length;
+        document.getElementById('totalCount').innerText = `总答题数：${answerRecord.total}题`;
+
+        // 2. 动态生成左侧题号导航
+        generateQuestionNav();
+
+        // 3. 显示第一题，更新答题进度和导航激活状态
+        showCurrentQuestion();
+
+        // 4. 更新侧边按钮启用/禁用状态
+        updateSidebarBtnStatus();
+
+        // 5. 为所有单选选项绑定即时判断事件
+        const allRadioInputs = document.querySelectorAll('input[type="radio"]');
+        allRadioInputs.forEach(input => {
+            input.addEventListener('change', function() {
+                // 禁用当前题目的所有选项（防止重复选择）
+                const currentQuestion = this.closest('.question-card');
+                const currentRadioInputs = currentQuestion.querySelectorAll('input[type="radio"]');
+                currentRadioInputs.forEach(radio => radio.disabled = true);
+
+                // 获取当前题目相关数据
+                const questionId = currentQuestion.getAttribute('data-question-id');
+                const answerInfo = currentQuestion.querySelector('.answer-info');
+                const correctAnswer = answerInfo.getAttribute('data-correct-answer');
+                const userAnswer = this.value;
+                const analysis = answerInfo.innerText;
+
+                // 高亮显示正确/错误选项
+                highlightOption(currentQuestion, correctAnswer, userAnswer);
+
+                // 填充解析区域并显示
+                const analysisContent = document.getElementById(`analysisContent${questionId}`);
+                const analysisArea = document.getElementById(`analysis${questionId}`);
+                analysisContent.innerText = analysis;
+                analysisArea.style.display = 'block';
+
+                // 答题结果判断，显示自定义提示框
+                if (userAnswer === correctAnswer) {
+                    currentQuestion.setAttribute('data-is-correct', 'true');
+                    showCustomTip('correct', '回答正确！', '恭喜你，掌握了该知识点～');
+                } else {
+                    currentQuestion.setAttribute('data-is-correct', 'false');
+                    showCustomTip('error', '回答错误', `正确答案是：${correctAnswer}，请仔细查看下方解析哦～`);
+                }
+
+                // 显示下一题按钮（最后一题显示提交按钮）
+                if (currentQuestionIndex < answerRecord.total - 1) {
+                    document.getElementById('nextBtn').style.display = 'block';
+                } else {
+                    document.getElementById('submitAllBtn').style.display = 'block';
+                }
+            });
+        });
+
+        // 6. 绑定自定义提示框确定按钮事件
+        document.getElementById('tipConfirm').addEventListener('click', function() {
+            customTip.style.display = 'none';
+        });
+
+        // 7. 绑定底部下一题按钮事件
+        document.getElementById('nextBtn').addEventListener('click', function() {
+            goToNextQuestion();
+            // 隐藏下一题按钮
+            this.style.display = 'none';
+        });
+
+        // 8. 绑定右侧侧边栏上下题按钮事件
+        prevBtn.addEventListener('click', goToPrevQuestion);
+        sidebarNextBtn.addEventListener('click', goToNextQuestion);
+
+        // 9. 绑定提交按钮事件，统计最终结果
+        document.getElementById('submitAllBtn').addEventListener('click', function() {
+            // 重新统计答对题数
+            answerRecord.correct = 0;
+            allQuestionCards.forEach(card => {
+                const isCorrect = card.getAttribute('data-is-correct');
+                if (isCorrect === 'true') {
+                    answerRecord.correct++;
+                }
+            });
+
+            // 计算正确率（保留2位小数，避免除零错误）
+            const accuracy = answerRecord.total > 0 
+                ? ((answerRecord.correct / answerRecord.total) * 100).toFixed(2) 
+                : '0.00';
+
+            // 更新统计结果页面
+            document.getElementById('correctCount').innerText = `答对题数：${answerRecord.correct}题`;
+            document.getElementById('accuracyRate').innerText = `正确率：${accuracy}%`;
+
+            // 显示统计区域
+            document.getElementById('resultContainer').style.display = 'block';
+
+            // 显示最终结果自定义提示框
+            showCustomTip('correct', '闯关完成！', `总题数：${answerRecord.total}题\n答对题数：${answerRecord.correct}题\n正确率：${accuracy}%`);
+        });
+    };
+
+    // 新增：动态生成左侧题号导航
+    function generateQuestionNav() {
+        const navList = document.getElementById('navList');
+        navList.innerHTML = ''; // 清空原有内容
+
+        for (let i = 0; i < allQuestionCards.length; i++) {
+            const navItem = document.createElement('a');
+            navItem.className = 'nav-item';
+            navItem.dataset.index = i;
+            navItem.innerText = i + 1;
+
+            // 绑定题号点击跳转事件
+            navItem.addEventListener('click', function() {
+                const targetIndex = parseInt(this.dataset.index);
+                goToSpecificQuestion(targetIndex);
+            });
+
+            navList.appendChild(navItem);
+            allNavItems.push(navItem);
+        }
+    }
+
+    // 新增：跳转到指定题号
+    function goToSpecificQuestion(targetIndex) {
+        if (targetIndex < 0 || targetIndex >= allQuestionCards.length) return;
+
+        // 隐藏当前题
+        allQuestionCards[currentQuestionIndex].classList.remove('active');
+        allNavItems[currentQuestionIndex].classList.remove('active');
+
+        // 更新当前索引
+        currentQuestionIndex = targetIndex;
+
+        // 显示目标题
+        showCurrentQuestion();
+
+        // 更新侧边按钮状态
+        updateSidebarBtnStatus();
+    }
+
+    // 新增：跳转到上一题
+    function goToPrevQuestion() {
+        if (currentQuestionIndex > 0) {
+            goToSpecificQuestion(currentQuestionIndex - 1);
+        }
+    }
+
+    // 新增：跳转到下一题
+    function goToNextQuestion() {
+        if (currentQuestionIndex < allQuestionCards.length - 1) {
+            goToSpecificQuestion(currentQuestionIndex + 1);
+            // 隐藏底部下一题按钮
+            document.getElementById('nextBtn').style.display = 'none';
+        }
+    }
+
+    // 新增：更新侧边按钮启用/禁用状态
+    function updateSidebarBtnStatus() {
+        // 上一题按钮：第一题禁用，其余启用
+        if (currentQuestionIndex === 0) {
+            prevBtn.classList.remove('enabled');
+        } else {
+            prevBtn.classList.add('enabled');
+        }
+
+        // 下一题按钮：最后一题禁用，其余启用
+        if (currentQuestionIndex === allQuestionCards.length - 1) {
+            sidebarNextBtn.classList.remove('enabled');
+        } else {
+            sidebarNextBtn.classList.add('enabled');
+        }
+    }
+
+    // 辅助函数1：显示当前题目并更新进度、导航激活状态
+    function showCurrentQuestion() {
+        if (allQuestionCards[currentQuestionIndex] && allNavItems[currentQuestionIndex]) {
+            // 激活当前题目
+            allQuestionCards[currentQuestionIndex].classList.add('active');
+            // 激活当前导航题号
+            allNavItems[currentQuestionIndex].classList.add('active');
+            // 更新答题进度提示
+            document.getElementById('questionProgress').innerText = 
+                `当前：第${currentQuestionIndex + 1}题 / 共${answerRecord.total}题`;
+        }
+    }
+
+    // 辅助函数2：显示自定义提示框
+    function showCustomTip(type, title, content) {
+        const tipTitle = document.getElementById('tipTitle');
+        const tipContent = document.getElementById('tipContent');
+
+        // 重置提示框样式
+        customTip.className = 'custom-tip';
+        customTip.classList.add(`${type}-tip`);
+
+        // 填充内容
+        tipTitle.innerText = title;
+        tipContent.innerText = content;
+
+        // 显示提示框
+        customTip.style.display = 'block';
+    }
+
+    // 辅助函数3：高亮显示正确/错误选项
+    function highlightOption(questionCard, correctAnswer, userAnswer) {
+        const optionItems = questionCard.querySelectorAll('.option-item');
+        optionItems.forEach(item => {
+            const input = item.querySelector('input');
+            if (input.value === correctAnswer) {
+                // 正确选项高亮
+                item.classList.add('correct');
+            } else if (input.value === userAnswer && userAnswer !== correctAnswer) {
+                // 错误选项标记
+                item.classList.add('incorrect');
+            }
+        });
+    }
+</script>
+</html>

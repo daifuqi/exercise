@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息技术基础习题闯关系统</title>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <!-- 新增：左侧题号导航栏 -->
+    <div class="question-nav" id="questionNav">
+        <div class="nav-title">题目导航</div>
+        <div class="nav-list" id="navList">
+            <!-- 题号将通过JS动态生成 -->
+        </div>
+    </div>
+    <div class="container">
+        <h1>信息技术基础选择练习</h1>
+        <a style="display: inline-block;align-items: center;justify-content: center;width: 80;height: 80;border: 3px solid #e5e7eb; border-radius: 6px;background-color: #ffffff; color: #374151;" href="index.html">返回主页</a>
+        <!-- 答题进度提示 -->
+        <div class="question-progress" id="questionProgress">当前：第1题 / 共25题</div>
+        
+        <!-- 题目列表：带图题目预留图片标签 -->
+        <div class="question-list" id="questionList">
+           <!-- 题目1 -->
+            <div class="question-card" data-question-id="1">
+                <div class="question-title">1.高远同学想将自己的电脑 IP 修改成 192.168.0.262，但是输入 262 后会自动变成 255，且出现以下提示，这说明（ ）。
+            </div>
+            <img src="images/base_choice_31.png" style="width: 260px;" />
+                <div class="option-item">
+                    <input type="radio" name="q1" value="A" id="q1a">
+                    <label for="q1a">A. IP 地址 192.168.0.262 已经被其他电脑占用</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q1" value="B" id="q1b">
+                    <label for="q1b">B. IP 地址的最后一段只能设置为 255</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q1" value="C" id="q1c">
+                    <label for="q1c">C. IP 地址每一段的值只能是 0 到 255 之间</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q1" value="D" id="q1d">
+                    <label for="q1d">D. IP 地址的最后一段不能设置为 262，可以是其它任意数值</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="C"> 
+                    解析：
+                    IPv4 地址由 4 段十进制数组成，每一段的合法范围是 0～255，262 超出范围，因此无法设置。
+                </div>
+                <div class="analysis-area" id="analysis1">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent1"></div>
+                </div>
+            </div>
+            <!-- 题目2 -->
+            <div class="question-card" data-question-id="2">
+                <div class="question-title">2.下列关于文件和文件夹命名的说法，正确的是（ ）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q2" value="A" id="q2a">
+                    <label for="q2a">A. 文件和文件夹都有扩展名</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q2" value="B" id="q2b">
+                    <label for="q2b">B. 文件名和文件夹名都要区分大小写</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q2" value="C" id="q2c">
+                    <label for="q2c">C. 在计算机中不能存在两个命名一样的文件夹</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q2" value="D" id="q2d">
+                    <label for="q2d">D. 文件和文件夹的命名，要清晰准确，便于快速找到需要的内容</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="D"> 
+                    解析：
+                    A 错误：文件夹一般没有扩展名。<br>
+                    B 错误：Windows 系统文件名不区分大小写。<br>
+                    C 错误：同一目录下不能重名，不同目录可以。<br>
+                    D 正确：命名规范、清晰，方便管理和查找。
+                </div>
+                <div class="analysis-area" id="analysis2">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent2"></div>
+                </div>
+            </div>
+            <!-- 题目3 -->
+            <div class="question-card" data-question-id="3">
+                <div class="question-title">3.金石文字，指铸在金属器物或是雕刻在砖石上的文字，这些文字与流传的文献本质上是一样的，都是研究历史弥足珍贵的史料。金石文字的出现处于第（ ）次信息技术革命。</div>
+                <div class="option-item">
+                    <input type="radio" name="q3" value="A" id="q3a">
+                    <label for="q3a">A. 一</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q3" value="B" id="q3b">
+                    <label for="q3b">B. 二</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q3" value="C" id="q3c">
+                    <label for="q3c">C. 三</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q3" value="D" id="q3d">
+                    <label for="q3d">D. 四</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="B"> 
+                    解析：
+                    第一次信息技术革命：语言的产生<br>
+                    第二次信息技术革命：文字的发明与使用<br>
+                    第三次信息技术革命：印刷术的发明<br>
+                    第四次信息技术革命：电报、电话、广播的应用<br>
+                    金石文字属于文字的使用，因此是第二次信息技术革命。
+                </div>
+                <div class="analysis-area" id="analysis3">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent3"></div>
+                </div>
+            </div>
+            <!-- 题目4 -->
+            <div class="question-card" data-question-id="4">
+                <div class="question-title">4.如图所示，使用计算器可以方便地将二进制数转换为其他进制，通过该计算器可以将二进制数 11101 转换为（ ）。
+            </div>
+            <img src="images/base_choice_34.png" style="width: 260px;" />
+                <div class="option-item">
+                    <input type="radio" name="q4" value="A" id="q4a">
+                    <label for="q4a">A. 十进制数 00011101</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q4" value="B" id="q4b">
+                    <label for="q4b">B. 十进制数 1D</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q4" value="C" id="q4c">
+                    <label for="q4c">C. 十进制数 29</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q4" value="D" id="q4d">
+                    <label for="q4d">D. 十进制数 35</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="C"> 
+                    解析：
+                    BIN 表示二进制，DEC 表示十进制，HEX 表示十六进制，OCT 表示八进制。
+                    二进制 11101 对应的十进制是 29。
+                </div>
+                <div class="analysis-area" id="analysis4">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent4"></div>
+                </div>
+            </div>
+            <!-- 题目5 -->
+            <div class="question-card" data-question-id="5">
+                <div class="question-title">5.我们在使用手机的过程中，若出现了以下提示，下列做法中最不建议采用的是（ ）。</div>
+                <img src="images/base_choice_35.png" style="width: 260px;" />
+                <div class="option-item">
+                    <input type="radio" name="q5" value="A" id="q5a">
+                    <label for="q5a">A. 卸载不常用的应用软件</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q5" value="B" id="q5b">
+                    <label for="q5b">B. 直接换一台手机使用</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q5" value="C" id="q5c">
+                    <label for="q5c">C. 将手机资料备份到本地电脑后删除</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q5" value="D" id="q5d">
+                    <label for="q5d">D. 清理手机中的垃圾文件和缓存文件</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="B"> 
+                    解析：
+                    A、C、D 都是合理、经济、有效的解决方法。
+                    直接换手机成本高、没必要，是最不建议的做法。
+                </div>
+                <div class="analysis-area" id="analysis5">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent5"></div>
+                </div>
+            </div>
+            <!-- 题目6 -->
+            <div class="question-card" data-question-id="6">
+                <div class="question-title">6.超市购物结算时，收银员首先会扫描商品条形码获取商品价格，然后扫描顾客提供的付款码结算。这一过程中主要应用的人工智能技术是（ ）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q6" value="A" id="q6a">
+                    <label for="q6a">A. 扫描商品条形码</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q6" value="B" id="q6b">
+                    <label for="q6b">B. 扫描付款码</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q6" value="C" id="q6c">
+                    <label for="q6c">C. 图像识别</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q6" value="D" id="q6d">
+                    <label for="q6d">D. 支付商品金额</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="C"> 
+                    解析：
+                    扫描条形码、付款码本质上都是对图像进行识别并提取信息，属于**图像识别**技术。
+                </div>
+                <div class="analysis-area" id="analysis6">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent6"></div>
+                </div>
+            </div>
+            <!-- 题目7 -->
+            <div class="question-card" data-question-id="7">
+                <div class="question-title">7.在 Windows 系统中，下列操作能删除文件的是（ ）。<br/><pre>
+    ① 选中文件后，按 Delete 键
+    ② 将文件拖动到 “回收站”
+    ③ 右键单击文件，选择 “删除”
+    ④ 右键单击文件，选择 “发送到”</pre></div>
+                <div class="option-item">
+                    <input type="radio" name="q7" value="A" id="q7a">
+                    <label for="q7a">A. ①②④</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q7" value="B" id="q7b">
+                    <label for="q7b">B. ①③④</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q7" value="C" id="q7c">
+                    <label for="q7c">C. ②③④</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q7" value="D" id="q7d">
+                    <label for="q7d">D. ①②③</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="D"> 
+                    解析：
+                    ①按Delete键、②拖到回收站、③右键删除都可以删除文件。
+                    ④“发送到”是复制/移动文件，不是删除。
+                </div>
+                <div class="analysis-area" id="analysis7">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent7"></div>
+                </div>
+            </div>
+            <!-- 题目8 -->
+            <div class="question-card" data-question-id="8">
+                <div class="question-title">8.某电脑平台在售的某笔记本电脑有多个版本供消费者选择，如图所示，已选版本中的 “512G” 指的是该笔记本电脑的（）。</div>
+                <img src="images/base_choice_38.png" style="width: 260px;" />
+                <div class="option-item">
+                    <input type="radio" name="q8" value="A" id="q8a">
+                    <label for="q8a">A. 内存大小</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q8" value="B" id="q8b">
+                    <label for="q8b">B. 硬盘容量</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q8" value="C" id="q8c">
+                    <label for="q8c">C. CPU 主频</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q8" value="D" id="q8d">
+                    <label for="q8d">D. 显示器尺寸</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="B"> 
+                    解析：
+                    笔记本配置里的 512G 通常指 **固态硬盘（SSD）的容量**，属于硬盘容量。
+                </div>
+                <div class="analysis-area" id="analysis8">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent8"></div>
+                </div>
+            </div>
+            <!-- 题目9 -->
+            <div class="question-card" data-question-id="9">
+                <div class="question-title">9.下图是小云电脑桌面上的部分学习资料截图。按照文件类型的分类方法，小云应将 “同桌的你.WAV” 放到（ ）文件夹中。</div>
+                <img src="images/base_choice_39.png" style="width: 260px;" />
+                <div class="option-item">
+                    <input type="radio" name="q9" value="A" id="q9a">
+                    <label for="q9a">A. 图片</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q9" value="B" id="q9b">
+                    <label for="q9b">B. 声音</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q9" value="C" id="q9c">
+                    <label for="q9c">C. 视频</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q9" value="D" id="q9d">
+                    <label for="q9d">D. 文档</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="B"> 
+                    解析：
+                    WAV 是常见的**声音（音频）文件格式**，应放入声音文件夹。
+                </div>
+                <div class="analysis-area" id="analysis9">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent9"></div>
+                </div>
+            </div>
+            <!-- 题目10 -->
+            <div class="question-card" data-question-id="10">
+                <div class="question-title">10.如图所示，在 Windows 中如需单独选中该文件夹中的帽子和伞两个图像文件，需要结合（ ）。</div>
+                <img src="images/base_choice_40.png" style="width: 260px;" />
+                <div class="option-item">
+                    <input type="radio" name="q10" value="A" id="q10a">
+                    <label for="q10a">A. Enter 键</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q10" value="B" id="q10b">
+                    <label for="q10b">B. Ctrl 键</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q10" value="C" id="q10c">
+                    <label for="q10c">C. Shift 键</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q10" value="D" id="q10d">
+                    <label for="q10d">D. Alt 键</label>
+                </div>
+                <div class="answer-info" style="display: none;" data-correct-answer="B"> 
+                    解析：
+                    在 Windows 中，按住 <strong>Ctrl 键</strong>，可以不连续、单独选中多个文件。
+                </div>
+                <div class="analysis-area" id="analysis10">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent10"></div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <!-- 下一题按钮（答题完成后显示） -->
+        <button class="btn next-btn" id="nextBtn">进入下一题</button>
+
+        <!-- 提交结果按钮（最后一题答题完成后显示） -->
+        <button class="btn submit-btn" id="submitAllBtn" style="display: none;">提交所有答案并查看统计结果</button>
+
+        <!-- 结果统计区域 -->
+        <div class="result-container" id="resultContainer">
+            <div class="result-title">闯关完成！答题统计</div>
+            <div class="result-info" id="totalCount">总答题数：0题</div>
+            <div class="result-info" id="correctCount">答对题数：0题</div>
+            <div class="result-info" id="accuracyRate">正确率：0%</div>
+        </div>
+
+        <!-- 新增：右侧上下题按钮容器 -->
+        <div class="btn-sidebar" id="btnSidebar">
+            <button class="sidebar-btn prev-btn" id="prevBtn">↑</button>
+            <button class="sidebar-btn next-btn" id="sidebarNextBtn">↓</button>
+        </div>
+    </div>
+
+    <!-- 新增：自定义提示框（全局唯一） -->
+    <div class="custom-tip" id="customTip">
+        <div class="tip-title" id="tipTitle"></div>
+        <div class="tip-content" id="tipContent"></div>
+        <button class="tip-confirm" id="tipConfirm">确定</button>
+    </div>
+</body>
+<script>
+    // 全局变量
+    let answerRecord = {
+        total: 0, // 总题数
+        correct: 0 // 答对题数
+    };
+    let currentQuestionIndex = 0; // 当前显示的题目索引（从0开始）
+    let allQuestionCards = []; // 所有题目卡片集合
+    let allNavItems = []; // 所有导航题号元素集合
+    const customTip = document.getElementById('customTip'); // 自定义提示框实例
+    const prevBtn = document.getElementById('prevBtn'); // 左侧上一题按钮
+    const sidebarNextBtn = document.getElementById('sidebarNextBtn'); // 右侧下一题按钮
+
+    // 页面加载完成后初始化功能
+    window.onload = function() {
+        // 1. 初始化变量，获取所有题目卡片
+        allQuestionCards = Array.from(document.querySelectorAll('.question-card'));
+        answerRecord.total = allQuestionCards.length;
+        document.getElementById('totalCount').innerText = `总答题数：${answerRecord.total}题`;
+
+        // 2. 动态生成左侧题号导航
+        generateQuestionNav();
+
+        // 3. 显示第一题，更新答题进度和导航激活状态
+        showCurrentQuestion();
+
+        // 4. 更新侧边按钮启用/禁用状态
+        updateSidebarBtnStatus();
+
+        // 5. 为所有单选选项绑定即时判断事件
+        const allRadioInputs = document.querySelectorAll('input[type="radio"]');
+        allRadioInputs.forEach(input => {
+            input.addEventListener('change', function() {
+                // 禁用当前题目的所有选项（防止重复选择）
+                const currentQuestion = this.closest('.question-card');
+                const currentRadioInputs = currentQuestion.querySelectorAll('input[type="radio"]');
+                currentRadioInputs.forEach(radio => radio.disabled = true);
+
+                // 获取当前题目相关数据
+                const questionId = currentQuestion.getAttribute('data-question-id');
+                const answerInfo = currentQuestion.querySelector('.answer-info');
+                const correctAnswer = answerInfo.getAttribute('data-correct-answer');
+                const userAnswer = this.value;
+                const analysis = answerInfo.innerText;
+
+                // 高亮显示正确/错误选项
+                highlightOption(currentQuestion, correctAnswer, userAnswer);
+
+                // 填充解析区域并显示
+                const analysisContent = document.getElementById(`analysisContent${questionId}`);
+                const analysisArea = document.getElementById(`analysis${questionId}`);
+                analysisContent.innerText = analysis;
+                analysisArea.style.display = 'block';
+
+                // 答题结果判断，显示自定义提示框
+                if (userAnswer === correctAnswer) {
+                    currentQuestion.setAttribute('data-is-correct', 'true');
+                    showCustomTip('correct', '回答正确！', '恭喜你，掌握了该知识点～');
+                } else {
+                    currentQuestion.setAttribute('data-is-correct', 'false');
+                    showCustomTip('error', '回答错误', `正确答案是：${correctAnswer}，请仔细查看下方解析哦～`);
+                }
+
+                // 显示下一题按钮（最后一题显示提交按钮）
+                if (currentQuestionIndex < answerRecord.total - 1) {
+                    document.getElementById('nextBtn').style.display = 'block';
+                } else {
+                    document.getElementById('submitAllBtn').style.display = 'block';
+                }
+            });
+        });
+
+        // 6. 绑定自定义提示框确定按钮事件
+        document.getElementById('tipConfirm').addEventListener('click', function() {
+            customTip.style.display = 'none';
+        });
+
+        // 7. 绑定底部下一题按钮事件
+        document.getElementById('nextBtn').addEventListener('click', function() {
+            goToNextQuestion();
+            // 隐藏下一题按钮
+            this.style.display = 'none';
+        });
+
+        // 8. 绑定右侧侧边栏上下题按钮事件
+        prevBtn.addEventListener('click', goToPrevQuestion);
+        sidebarNextBtn.addEventListener('click', goToNextQuestion);
+
+        // 9. 绑定提交按钮事件，统计最终结果
+        document.getElementById('submitAllBtn').addEventListener('click', function() {
+            // 重新统计答对题数
+            answerRecord.correct = 0;
+            allQuestionCards.forEach(card => {
+                const isCorrect = card.getAttribute('data-is-correct');
+                if (isCorrect === 'true') {
+                    answerRecord.correct++;
+                }
+            });
+
+            // 计算正确率（保留2位小数，避免除零错误）
+            const accuracy = answerRecord.total > 0 
+                ? ((answerRecord.correct / answerRecord.total) * 100).toFixed(2) 
+                : '0.00';
+
+            // 更新统计结果页面
+            document.getElementById('correctCount').innerText = `答对题数：${answerRecord.correct}题`;
+            document.getElementById('accuracyRate').innerText = `正确率：${accuracy}%`;
+
+            // 显示统计区域
+            document.getElementById('resultContainer').style.display = 'block';
+
+            // 显示最终结果自定义提示框
+            showCustomTip('correct', '闯关完成！', `总题数：${answerRecord.total}题\n答对题数：${answerRecord.correct}题\n正确率：${accuracy}%`);
+        });
+    };
+
+    // 新增：动态生成左侧题号导航
+    function generateQuestionNav() {
+        const navList = document.getElementById('navList');
+        navList.innerHTML = ''; // 清空原有内容
+
+        for (let i = 0; i < allQuestionCards.length; i++) {
+            const navItem = document.createElement('a');
+            navItem.className = 'nav-item';
+            navItem.dataset.index = i;
+            navItem.innerText = i + 1;
+
+            // 绑定题号点击跳转事件
+            navItem.addEventListener('click', function() {
+                const targetIndex = parseInt(this.dataset.index);
+                goToSpecificQuestion(targetIndex);
+            });
+
+            navList.appendChild(navItem);
+            allNavItems.push(navItem);
+        }
+    }
+
+    // 新增：跳转到指定题号
+    function goToSpecificQuestion(targetIndex) {
+        if (targetIndex < 0 || targetIndex >= allQuestionCards.length) return;
+
+        // 隐藏当前题
+        allQuestionCards[currentQuestionIndex].classList.remove('active');
+        allNavItems[currentQuestionIndex].classList.remove('active');
+
+        // 更新当前索引
+        currentQuestionIndex = targetIndex;
+
+        // 显示目标题
+        showCurrentQuestion();
+
+        // 更新侧边按钮状态
+        updateSidebarBtnStatus();
+    }
+
+    // 新增：跳转到上一题
+    function goToPrevQuestion() {
+        if (currentQuestionIndex > 0) {
+            goToSpecificQuestion(currentQuestionIndex - 1);
+        }
+    }
+
+    // 新增：跳转到下一题
+    function goToNextQuestion() {
+        if (currentQuestionIndex < allQuestionCards.length - 1) {
+            goToSpecificQuestion(currentQuestionIndex + 1);
+            // 隐藏底部下一题按钮
+            document.getElementById('nextBtn').style.display = 'none';
+        }
+    }
+
+    // 新增：更新侧边按钮启用/禁用状态
+    function updateSidebarBtnStatus() {
+        // 上一题按钮：第一题禁用，其余启用
+        if (currentQuestionIndex === 0) {
+            prevBtn.classList.remove('enabled');
+        } else {
+            prevBtn.classList.add('enabled');
+        }
+
+        // 下一题按钮：最后一题禁用，其余启用
+        if (currentQuestionIndex === allQuestionCards.length - 1) {
+            sidebarNextBtn.classList.remove('enabled');
+        } else {
+            sidebarNextBtn.classList.add('enabled');
+        }
+    }
+
+    // 辅助函数1：显示当前题目并更新进度、导航激活状态
+    function showCurrentQuestion() {
+        if (allQuestionCards[currentQuestionIndex] && allNavItems[currentQuestionIndex]) {
+            // 激活当前题目
+            allQuestionCards[currentQuestionIndex].classList.add('active');
+            // 激活当前导航题号
+            allNavItems[currentQuestionIndex].classList.add('active');
+            // 更新答题进度提示
+            document.getElementById('questionProgress').innerText = 
+                `当前：第${currentQuestionIndex + 1}题 / 共${answerRecord.total}题`;
+        }
+    }
+
+    // 辅助函数2：显示自定义提示框
+    function showCustomTip(type, title, content) {
+        const tipTitle = document.getElementById('tipTitle');
+        const tipContent = document.getElementById('tipContent');
+
+        // 重置提示框样式
+        customTip.className = 'custom-tip';
+        customTip.classList.add(`${type}-tip`);
+
+        // 填充内容
+        tipTitle.innerText = title;
+        tipContent.innerText = content;
+
+        // 显示提示框
+        customTip.style.display = 'block';
+    }
+
+    // 辅助函数3：高亮显示正确/错误选项
+    function highlightOption(questionCard, correctAnswer, userAnswer) {
+        const optionItems = questionCard.querySelectorAll('.option-item');
+        optionItems.forEach(item => {
+            const input = item.querySelector('input');
+            if (input.value === correctAnswer) {
+                // 正确选项高亮
+                item.classList.add('correct');
+            } else if (input.value === userAnswer && userAnswer !== correctAnswer) {
+                // 错误选项标记
+                item.classList.add('incorrect');
+            }
+        });
+    }
+</script>
+</html>
