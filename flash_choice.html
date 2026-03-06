@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flash习题闯关系统</title>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <!-- 新增：左侧题号导航栏 -->
+    <div class="question-nav" id="questionNav">
+        <div class="nav-title">题目导航</div>
+        <div class="nav-list" id="navList">
+            <!-- 题号将通过JS动态生成 -->
+        </div>
+    </div>
+    <div class="container">
+        <h1>flash选择练习</h1>
+        <a style="display: inline-block;align-items: center;justify-content: center;width: 80;height: 80;border: 3px solid #e5e7eb; border-radius: 6px;background-color: #ffffff; color: #374151;" href="index.html">返回主页</a>
+        <!-- 答题进度提示 -->
+        <div class="question-progress" id="questionProgress">当前：第1题 / 共25题</div>
+        
+        <!-- 题目列表：带图题目预留图片标签 -->
+        <div class="question-list" id="questionList">
+            <!-- 题目1 -->
+            <div class="question-card" data-question-id="1">
+                <div class="question-title">1.在 Flash 中，要制作地球绕太阳公转的动画，使用（ ）来实现最合适。</div>
+                <div class="option-item">
+                    <input type="radio" name="q1" value="A" id="q1a">
+                    <label for="q1a">A. 引导层动画</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q1" value="B" id="q1b">
+                    <label for="q1b">B. 遮罩动画</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q1" value="C" id="q1c">
+                    <label for="q1c">C. 逐帧动画</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q1" value="D" id="q1d">
+                    <label for="q1d">D. 形变动画</label>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="A">
+                    引导层动画可以让对象沿着指定路径运动，适合制作地球绕太阳公转的轨迹动画。
+                </div>
+                <div class="analysis-area" id="analysis1">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent1"></div>
+                </div>
+            </div>
+            <!-- 题目2 -->
+            <div class="question-card" data-question-id="2">
+                <div class="question-title">2.在 Flash 舞台中，当前选中的对象如图所示，共有元件（ ）个。</div>
+                <img src="images/flash_choice_2.png" style="width: 260px;" alt="">
+                <div class="option-item">
+                    <input type="radio" name="q2" value="A" id="q2a">
+                    <label for="q2a">A. 1</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q2" value="B" id="q2b">
+                    <label for="q2b">B. 2</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q2" value="C" id="q2c">
+                    <label for="q2c">C. 3</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q2" value="D" id="q2d">
+                    <label for="q2d">D. 4</label>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="B">
+                    从截图中可判断当前选中的元件数量为2个，因此答案选B。
+                </div>
+                <div class="analysis-area" id="analysis2">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent2"></div>
+                </div>
+            </div>
+            <!-- 题目3 -->
+            <div class="question-card" data-question-id="3">
+                <div class="question-title">3.在使用 Flash 软件编辑某动画，该动画的时间轴截图如图所示，下列关于该动画的说法错误的是（ ）。</div>
+                <img src="images/flash_choice_3.png" style="width: 260px;" alt="">
+                <div class="option-item">
+                    <input type="radio" name="q3" value="A" id="q3a">
+                    <label for="q3a">A. 此动画一共有 2 个关键帧</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q3" value="B" id="q3b">
+                    <label for="q3b">B. 此动画是一个形状补间动画</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q3" value="C" id="q3c">
+                    <label for="q3c">C. 此动画总共有 9 帧，持续时间为 1 秒</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q3" value="D" id="q3d">
+                    <label for="q3d">D. 此动画总共有 30 帧，帧频为 8fps</label>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="C">
+                    此动画总共有 30 帧，不是 9 帧，因此 C 选项说法错误。
+                </div>
+                <div class="analysis-area" id="analysis3">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent3">从时间轴可以看出动画总帧数为 30 帧，所以“共有 9 帧”的描述错误。</div>
+                </div>
+            </div>
+            <!-- 题目4 -->
+            <div class="question-card" data-question-id="4">
+                <div class="question-title">4.在 Flash 中，编辑文字需要用到的工具是（ ）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q4" value="A" id="q4a">
+                    <label for="q4a">A. 铅笔工具</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q4" value="B" id="q4b">
+                    <label for="q4b">B. 文本工具</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q4" value="C" id="q4c">
+                    <label for="q4c">C. 钢笔工具</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q4" value="D" id="q4d">
+                    <label for="q4d">D. 墨水瓶工具</label>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="B">
+                    A. 铅笔工具：用于绘制自由线条和图形，不用于编辑文字。
+                    B. 文本工具：专门用于创建、输入和编辑文字内容，是 Flash 中处理文字的核心工具。
+                    C. 钢笔工具：用于绘制和编辑精确的矢量路径和形状，不用于文字编辑。
+                    D. 墨水瓶工具：用于修改图形的轮廓线颜色和样式，与文字编辑无关。
+                </div>
+                <div class="analysis-area" id="analysis4">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent4"></div>
+                </div>
+            </div>
+            <!-- 题目5 -->
+            <div class="question-card" data-question-id="5">
+                <div class="question-title">5.在 Flash 中，将图 1 变为图 2 应该使用的工具是（ ）。</div>
+                <img src="images/flash_choice_5.png" style="width: 260px;" alt="">
+                <div class="option-item">
+                    <input type="radio" name="q5" value="A" id="q5a">
+                    <label for="q5a">A. <img src="images/flash_choice_5_a.png" alt=""></label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q5" value="B" id="q5b">
+                    <label for="q5b">B. <img src="images/flash_choice_5_b.png" alt=""></label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q5" value="C" id="q5c">
+                    <label for="q5c">C. <img src="images/flash_choice_5_c.png" alt=""></label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q5" value="D" id="q5d">
+                    <label for="q5d">D. <img src="images/flash_choice_5_d.png" alt=""></label>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="A">
+                    A.墨水瓶工具：专门用于修改图形的轮廓线（边框）颜色和样式，符合本题需求。
+                    B.颜料桶工具：用于修改图形的内部填充色，不适合修改边框。
+                    C.滴管工具：用于吸取颜色，不能直接修改图形。
+                    D.橡皮擦工具：用于擦除图形，不符合题意。
+                </div>
+                <div class="analysis-area" id="analysis5">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent5"></div>
+                </div>
+            </div>
+            <!-- 题目6 -->
+            <div class="question-card" data-question-id="6">
+                <div class="question-title">6.Flash 制作动画的时间轴如下图所示，在进行测试影片时，下列说法正确的是（ ）。</div>
+                <img src="images/flash_choice_6.png" style="width: 260px;" alt="">
+                <div class="option-item">
+                    <input type="radio" name="q6" value="A" id="q6a">
+                    <label for="q6a">A. “引导层” 和 “草原” 图层的内容不会显示出来</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q6" value="B" id="q6b">
+                    <label for="q6b">B. “引导层” 和 “草原” 图层的内容都会显示出来</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q6" value="C" id="q6c">
+                    <label for="q6c">C. “引导层” 图层的内容会显示出来，“草原” 图层的内容不会显示出来</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q6" value="D" id="q6d">
+                    <label for="q6d">D. “引导层” 图层的内容不会显示出来，“草原” 图层的内容会显示出来</label>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="D">
+                    引导层只起到路径引导作用，测试影片时不会显示；普通图层“草原”会正常显示。
+                </div>
+                <div class="analysis-area" id="analysis6">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent6"></div>
+                </div>
+            </div>
+            <!-- 题目7 -->
+            <div class="question-card" data-question-id="7">
+                <div class="question-title">7.要制作蝴蝶沿引导层路径运动的画面，需要在（ ）图层创建补间动画。</div>
+                <img src="images/flash_choice_7.png" style="width: 260px;" alt="">
+                <div class="option-item">
+                    <input type="radio" name="q7" value="A" id="q7a">
+                    <label for="q7a">A. 引导层：蝴蝶</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q7" value="B" id="q7b">
+                    <label for="q7b">B. 蝴蝶</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q7" value="C" id="q7c">
+                    <label for="q7c">C. 背景</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q7" value="D" id="q7d">
+                    <label for="q7d">D. 文字</label>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="B">
+                    引导层仅用于绘制运动路径，补间动画需要在承载运动对象（蝴蝶）的普通图层中创建，因此选B。
+                </div>
+                <div class="analysis-area" id="analysis7">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent7"></div>
+                </div>
+            </div>
+            <!-- 题目8 -->
+            <div class="question-card" data-question-id="8">
+                <div class="question-title">8.在使用 Flash 软件制作文字变图形的动画时，添加 “形状补间” 动画的操作是（ ）。</div>
+                <img src="images/flash_choice_8.png" style="width: 260px;" alt="">
+                <div class="option-item">
+                    <input type="radio" name="q8" value="A" id="q8a">
+                    <label for="q8a">A. 选中第 1 帧，“属性” 面板中将补间设为形状</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q8" value="B" id="q8b">
+                    <label for="q8b">B. 选中第 1 帧，“属性” 面板中将补间设为动画</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q8" value="C" id="q8c">
+                    <label for="q8c">C. 右键单击第 1 帧，在快捷菜单中选中创建补间</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q8" value="D" id="q8d">
+                    <label for="q8d">D. 右键单击第 20 帧，在快捷菜单中选中创建补间</label>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="A">
+                    形状补间需要在属性面板中设置为“形状”，用于实现图形之间的变形动画。右键创建的补间动画默认为动作补间。
+                </div>
+                <div class="analysis-area" id="analysis8">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent8"></div>
+                </div>
+            </div>
+            <!-- 题目9 -->
+            <div class="question-card" data-question-id="9">
+                <div class="question-title">9.在 Flash 中，要将左图变成右图效果需要执行的操作是（ ）。</div>
+                <img src="images/flash_choice_9.png" style="width: 260px;" alt="">
+                <div class="option-item">
+                    <input type="radio" name="q9" value="A" id="q9a">
+                    <label for="q9a">A. 对左图文字进行 2 次 “分离” 操作</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q9" value="B" id="q9b">
+                    <label for="q9b">B. 对左图文字进行 1 次 “分离” 操作</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q9" value="C" id="q9c">
+                    <label for="q9c">C. 将左图文字转换为元件操作</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q9" value="D" id="q9d">
+                    <label for="q9d">D. 将左图文字进行修改颜色操作</label>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="A">
+                    文字要变成可形状补间的图形，需要执行2次分离操作，第一次打散成单个文字，第二次变成矢量图形。
+                </div>
+                <div class="analysis-area" id="analysis9">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent9"></div>
+                </div>
+            </div>
+            <!-- 题目10 -->
+            <div class="question-card" data-question-id="10">
+                <div class="question-title">10.如下图所示，当前在 Flash 中编辑的对象是（ ）。</div>
+                <img src="images/flash_choice_10.png" style="width: 260px;" alt="">
+                <div class="option-item">
+                    <input type="radio" name="q10" value="A" id="q10a">
+                    <label for="q10a">A. 古堡教堂.fla</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q10" value="B" id="q10b">
+                    <label for="q10b">B. 图层 1</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q10" value="C" id="q10c">
+                    <label for="q10c">C. 场景 1</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q10" value="D" id="q10d">
+                    <label for="q10d">D. pic1</label>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="D">
+                    A（古堡教堂.fla）：是整个项目文件，只有在主场景编辑时才会显示。B（图层 1）：是当前编辑位置的载体，不是编辑对象的名称。C（场景 1）：是主场景，当前并未处于主场景编辑状态。
+                </div>
+                <div class="analysis-area" id="analysis10">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent10"></div>
+                </div>
+            </div>
+            <!-- 题目11 -->
+            <div class="question-card" data-question-id="11">
+                <div class="question-title">11.在 Flash 中，选中椭圆工具并将其属性按下图所示进行设置，则可以在舞台中绘制的实例图像是（ ）。</div>
+                <img src="images/flash_choice_11.png" style="width: 260px;" alt="">
+                <div class="option-item">
+                    <input type="radio" name="q11" value="A" id="q11a">
+                    <label for="q11a">A. <img src="images/flash_choice_11_a.png"  alt=""></label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q11" value="B" id="q11b">
+                    <label for="q11b">B. <img src="images/flash_choice_11_b.png"  alt=""></label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q11" value="C" id="q11c">
+                    <label for="q11c">C. <img src="images/flash_choice_11_c.png"  alt=""></label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q11" value="D" id="q11d">
+                    <label for="q11d">D. <img src="images/flash_choice_11_d.png"  alt=""></label>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="A">
+                    根据属性面板的设置：填充色为蓝色，边框色为透明色，因此绘制出的是蓝色填充、透明边框的椭圆。
+                </div>
+                <div class="analysis-area" id="analysis11">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent11"></div>
+                </div>
+            </div>
+            <!-- 题目12 -->
+            <div class="question-card" data-question-id="12">
+                <div class="question-title">12.使用 Flash 制作 “文字变图形” 变形动画的部分界面如图所示，导致该变形动画制作失败的原因是（ ）。</div>
+                <img src="images/flash_choice_12.png" style="width: 260px;" alt="">
+                <div class="option-item">
+                    <input type="radio" name="q12" value="A" id="q12a">
+                    <label for="q12a">A. 第 1 帧中的文字没有进行分离</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q12" value="B" id="q12b">
+                    <label for="q12b">B. 第 1 帧中的文字没有转换为元件</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q12" value="C" id="q12c">
+                    <label for="q12c">C. 第 20 帧中的图形没有进行分离</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q12" value="D" id="q12d">
+                    <label for="q12d">D. 第 20 帧中的图形没有转换为元件</label>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="A">
+                    形状补间动画要求对象必须是矢量图形，文字需要分离（打散）后才能实现变形动画，因此动画失败是因为第1帧文字未分离。
+                </div>
+                <div class="analysis-area" id="analysis12">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent12"></div>
+                </div>
+            </div>
+            <!-- 题目13 -->
+            <div class="question-card" data-question-id="13">
+                <div class="question-title">13.在 Flash 中制作如下图所示的动画，下列关于该动画的说法错误的是（ ）。</div>
+                <img src="images/flash_choice_13.png" style="width: 360px;" alt="">
+                <div class="option-item">
+                    <input type="radio" name="q13" value="A" id="q13a">
+                    <label for="q13a">A. “图层 2” 和 “图层 6” 使用的都是动作补间动画</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q13" value="B" id="q13b">
+                    <label for="q13b">B. 测试影片时，“图层 2” 和 “图层 6” 中的对象会同时运动</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q13" value="C" id="q13c">
+                    <label for="q13c">C. “图层 2” 被 “图层 6” 引导，“图层 6” 被引导层引导</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q13" value="D" id="q13d">
+                    <label for="q13d">D. “图层 2” 和 “图层 6” 都被同一个引导层引导</label>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="C">
+                    Flash 中普通图层无法引导其他图层，只有专用的 “引导层” 能为下方的被引导层提供运动路径。“图层 6” 是普通图层（非引导层），无法引导 “图层 2”，该说法违背软件逻辑，是错误的。
+                </div>
+                <div class="analysis-area" id="analysis13">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent13"></div>
+                </div>
+            </div>
+            <!-- 题目14 -->
+            <div class="question-card" data-question-id="14">
+                <div class="question-title">14.如图所示，选中 Flash 舞台中的足球实例，按下 Delete 键，则 “图层 1” 图层中的第 1 帧会（ ）。</div>
+                <img src="images/flash_choice_14.png" style="width: 260px;" alt="">
+                <div class="option-item">
+                    <input type="radio" name="q14" value="A" id="q14a">
+                    <label for="q14a">A. 变为关键帧</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q14" value="B" id="q14b">
+                    <label for="q14b">B. 被删除</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q14" value="C" id="q14c">
+                    <label for="q14c">C. 变为普通帧</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q14" value="D" id="q14d">
+                    <label for="q14d">D. 变为空白关键帧</label>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="D">
+                    删除关键帧中的舞台对象后，该关键帧不会消失，而是变为“空白关键帧”（仅保留帧位置，无任何舞台内容）。
+                </div>
+                <div class="analysis-area" id="analysis14">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent14"></div>
+                </div>
+            </div>
+            <!-- 题目15 -->
+            <div class="question-card" data-question-id="15">
+                <div class="question-title">要在 Flash 舞台中绘制一个如图所示的八边形，可以将多角星形工具的属性设置成（ ）。</div>
+                <img src="images/flash_choice_15.png" alt="">
+                <div class="option-item">
+                    <input type="radio" name="q15" value="A" id="q15a">
+                    <label for="q15a">A.<img src="images/flash_choice_15_a.png"  alt=""></label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q15" value="B" id="q15b">
+                    <label for="q15b">B.<img src="images/flash_choice_15_b.png"  alt=""></label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q15" value="C" id="q15c">
+                    <label for="q15c">C.<img src="images/flash_choice_15_c.png"  alt=""></label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q15" value="D" id="q15d">
+                    <label for="q15d">D.<img src="images/flash_choice_15_d.png"  alt=""></label>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="C">
+                    该八边形外边框是红色虚线，内部填充为蓝色，因此选C。
+                </div>
+                <div class="analysis-area" id="analysis15">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent15"></div>
+                </div>
+            </div>
+            <!-- 题目16 -->
+            <div class="question-card" data-question-id="16">
+                <div class="question-title">16.在 Flash 中，要将制作的动画保存为 GIF 格式的动态图像，正确的操作是（ ）。</div>
+                <div class="option-item">
+                    <input type="radio" name="q16" value="A" id="q16a">
+                    <label for="q16a">A. 点击 “文件” 菜单下的保存命令，将动画保存为 GIF 格式文件</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q16" value="B" id="q16b">
+                    <label for="q16b">B. 点击 “文件” 菜单下的另存为命令，将动画保存为 GIF 格式文件</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q16" value="C" id="q16c">
+                    <label for="q16c">C. 点击 “文件” 菜单下的导出→导出图像命令，将动画保存为 GIF 格式文件</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q16" value="D" id="q16d">
+                    <label for="q16d">D. 点击 “文件” 菜单下的导出→导出影片命令，将动画保存为 GIF 格式文件</label>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="D">
+                    动态GIF是动画影片格式，需通过“文件→导出→导出影片”命令导出，保存为GIF动画。
+                </div>
+                <div class="analysis-area" id="analysis16">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent16"></div>
+                </div>
+            </div>
+            <!-- 题目17 -->
+            <div class="question-card" data-question-id="17">
+                <div class="question-title">17.Flash 中铅笔工具的属性面板如下图所示，更改①处的数字可以（ ）。</div>
+                <img src="images/flash_choice_17.png" alt="">
+                <div class="option-item">
+                    <input type="radio" name="q17" value="A" id="q17a">
+                    <label for="q17a">A. 改变铅笔线条的粗细</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q17" value="B" id="q17b">
+                    <label for="q17b">B. 改变铅笔线条的线型</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q17" value="C" id="q17c">
+                    <label for="q17c">C. 改变使用铅笔绘制线条的光滑度</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q17" value="D" id="q17d">
+                    <label for="q17d">D. 改变铅笔线条的颜色</label>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="A">
+                    铅笔工具属性面板中①处是线条粗细（高度）数值，修改该数字可改变线条的粗细。
+                </div>
+                <div class="analysis-area" id="analysis17">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent17"></div>
+                </div>
+            </div>
+            <!-- 题目18 -->
+            <div class="question-card" data-question-id="18">
+                <div class="question-title">18.在 Flash 中，为方便后续修改，可以将动画作品保存为（ ）格式。</div>
+                <div class="option-item">
+                    <input type="radio" name="q18" value="A" id="q18a">
+                    <label for="q18a">A. .gif</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q18" value="B" id="q18b">
+                    <label for="q18b">B. .swf</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q18" value="C" id="q18c">
+                    <label for="q18c">C. .fla</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q18" value="D" id="q18d">
+                    <label for="q18d">D. .png</label>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="C">
+                    .fla 是 Flash 的源文件格式，包含图层、帧、元件等所有编辑信息，方便后续修改。
+                </div>
+                <div class="analysis-area" id="analysis18">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent18"></div>
+                </div>
+            </div>
+            <!-- 题目19 -->
+            <div class="question-card" data-question-id="19">
+                <div class="question-title">19.下图为 Flash 第一帧和最后一帧的舞台界面截图，两边的行人都往舞台中间行走，下列说法正确的是（ ）。</div>
+                <img src="images/flash_choice_19.png" style="width: 280px;" alt="">
+                <div class="option-item">
+                    <input type="radio" name="q19" value="A" id="q19a">
+                    <label for="q19a">A. 右边的行人先移动，左边的行人晚点移动</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q19" value="B" id="q19b">
+                    <label for="q19b">B. 两边的行人同时移动</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q19" value="C" id="q19c">
+                    <label for="q19c">C. 右边的行人先移动，停止后左边的行人再移动</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q19" value="D" id="q19d">
+                    <label for="q19d">D. 背景移动，两边的行人不动</label>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="B">
+                    同一时间轴内的多个图层动画会同时播放，因此两边行人同时向中间移动。
+                </div>
+                <div class="analysis-area" id="analysis19">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent19"></div>
+                </div>
+            </div>
+            <!-- 题目20 -->
+            <div class="question-card" data-question-id="20">
+                <div class="question-title">20.如图所示，在 Flash 中插入了声音的图层是（ ）。</div>
+                <img src="images/flash_choice_20.png" style="width: 280px;" alt="">
+                <div class="option-item">
+                    <input type="radio" name="q20" value="A" id="q20a">
+                    <label for="q20a">A. 图层 1</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q20" value="B" id="q20b">
+                    <label for="q20b">B. 图层 2</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q20" value="C" id="q20c">
+                    <label for="q20c">C. 图层 4</label>
+                </div>
+                <div class="option-item">
+                    <input type="radio" name="q20" value="D" id="q20d">
+                    <label for="q20d">D. 图层 5</label>
+                </div>
+                <div class="answer-info" style="display:none;" data-correct-answer="D">
+                    在 Flash 的时间轴中，插入了声音的图层会显示出代表音频波形的蓝色线条。从图中可以清晰地看到，图层 5的时间轴上有蓝色的波形线，这表明该图层中插入了声音。其他图层的时间轴上没有这种波形线，因此没有插入声音。
+                </div>
+                <div class="analysis-area" id="analysis20">
+                    <div class="analysis-title">答案解读</div>
+                    <div class="analysis-content" id="analysisContent20"></div>
+                </div>
+            </div>
+            
+
+
+        
+        </div>
+        <!-- 下一题按钮（答题完成后显示） -->
+        <button class="btn next-btn" id="nextBtn">进入下一题</button>
+
+        <!-- 提交结果按钮（最后一题答题完成后显示） -->
+        <button class="btn submit-btn" id="submitAllBtn" style="display: none;">提交所有答案并查看统计结果</button>
+
+        <!-- 结果统计区域 -->
+        <div class="result-container" id="resultContainer">
+            <div class="result-title">闯关完成！答题统计</div>
+            <div class="result-info" id="totalCount">总答题数：0题</div>
+            <div class="result-info" id="correctCount">答对题数：0题</div>
+            <div class="result-info" id="accuracyRate">正确率：0%</div>
+        </div>
+
+        <!-- 新增：右侧上下题按钮容器 -->
+        <div class="btn-sidebar" id="btnSidebar">
+            <button class="sidebar-btn prev-btn" id="prevBtn">↑</button>
+            <button class="sidebar-btn next-btn" id="sidebarNextBtn">↓</button>
+        </div>
+    </div>
+
+    <!-- 新增：自定义提示框（全局唯一） -->
+    <div class="custom-tip" id="customTip">
+        <div class="tip-title" id="tipTitle"></div>
+        <div class="tip-content" id="tipContent"></div>
+        <button class="tip-confirm" id="tipConfirm">确定</button>
+    </div>
+</body>
+<script>
+    // 全局变量
+    let answerRecord = {
+        total: 0, // 总题数
+        correct: 0 // 答对题数
+    };
+    let currentQuestionIndex = 0; // 当前显示的题目索引（从0开始）
+    let allQuestionCards = []; // 所有题目卡片集合
+    let allNavItems = []; // 所有导航题号元素集合
+    const customTip = document.getElementById('customTip'); // 自定义提示框实例
+    const prevBtn = document.getElementById('prevBtn'); // 左侧上一题按钮
+    const sidebarNextBtn = document.getElementById('sidebarNextBtn'); // 右侧下一题按钮
+
+    // 页面加载完成后初始化功能
+    window.onload = function() {
+        // 1. 初始化变量，获取所有题目卡片
+        allQuestionCards = Array.from(document.querySelectorAll('.question-card'));
+        answerRecord.total = allQuestionCards.length;
+        document.getElementById('totalCount').innerText = `总答题数：${answerRecord.total}题`;
+
+        // 2. 动态生成左侧题号导航
+        generateQuestionNav();
+
+        // 3. 显示第一题，更新答题进度和导航激活状态
+        showCurrentQuestion();
+
+        // 4. 更新侧边按钮启用/禁用状态
+        updateSidebarBtnStatus();
+
+        // 5. 为所有单选选项绑定即时判断事件
+        const allRadioInputs = document.querySelectorAll('input[type="radio"]');
+        allRadioInputs.forEach(input => {
+            input.addEventListener('change', function() {
+                // 禁用当前题目的所有选项（防止重复选择）
+                const currentQuestion = this.closest('.question-card');
+                const currentRadioInputs = currentQuestion.querySelectorAll('input[type="radio"]');
+                currentRadioInputs.forEach(radio => radio.disabled = true);
+
+                // 获取当前题目相关数据
+                const questionId = currentQuestion.getAttribute('data-question-id');
+                const answerInfo = currentQuestion.querySelector('.answer-info');
+                const correctAnswer = answerInfo.getAttribute('data-correct-answer');
+                const userAnswer = this.value;
+                const analysis = answerInfo.innerText;
+
+                // 高亮显示正确/错误选项
+                highlightOption(currentQuestion, correctAnswer, userAnswer);
+
+                // 填充解析区域并显示
+                const analysisContent = document.getElementById(`analysisContent${questionId}`);
+                const analysisArea = document.getElementById(`analysis${questionId}`);
+                analysisContent.innerText = analysis;
+                analysisArea.style.display = 'block';
+
+                // 答题结果判断，显示自定义提示框
+                if (userAnswer === correctAnswer) {
+                    currentQuestion.setAttribute('data-is-correct', 'true');
+                    showCustomTip('correct', '回答正确！', '恭喜你，掌握了该知识点～');
+                } else {
+                    currentQuestion.setAttribute('data-is-correct', 'false');
+                    showCustomTip('error', '回答错误', `正确答案是：${correctAnswer}，请仔细查看下方解析哦～`);
+                }
+
+                // 显示下一题按钮（最后一题显示提交按钮）
+                if (currentQuestionIndex < answerRecord.total - 1) {
+                    document.getElementById('nextBtn').style.display = 'block';
+                } else {
+                    document.getElementById('submitAllBtn').style.display = 'block';
+                }
+            });
+        });
+
+        // 6. 绑定自定义提示框确定按钮事件
+        document.getElementById('tipConfirm').addEventListener('click', function() {
+            customTip.style.display = 'none';
+        });
+
+        // 7. 绑定底部下一题按钮事件
+        document.getElementById('nextBtn').addEventListener('click', function() {
+            goToNextQuestion();
+            // 隐藏下一题按钮
+            this.style.display = 'none';
+        });
+
+        // 8. 绑定右侧侧边栏上下题按钮事件
+        prevBtn.addEventListener('click', goToPrevQuestion);
+        sidebarNextBtn.addEventListener('click', goToNextQuestion);
+
+        // 9. 绑定提交按钮事件，统计最终结果
+        document.getElementById('submitAllBtn').addEventListener('click', function() {
+            // 重新统计答对题数
+            answerRecord.correct = 0;
+            allQuestionCards.forEach(card => {
+                const isCorrect = card.getAttribute('data-is-correct');
+                if (isCorrect === 'true') {
+                    answerRecord.correct++;
+                }
+            });
+
+            // 计算正确率（保留2位小数，避免除零错误）
+            const accuracy = answerRecord.total > 0 
+                ? ((answerRecord.correct / answerRecord.total) * 100).toFixed(2) 
+                : '0.00';
+
+            // 更新统计结果页面
+            document.getElementById('correctCount').innerText = `答对题数：${answerRecord.correct}题`;
+            document.getElementById('accuracyRate').innerText = `正确率：${accuracy}%`;
+
+            // 显示统计区域
+            document.getElementById('resultContainer').style.display = 'block';
+
+            // 显示最终结果自定义提示框
+            showCustomTip('correct', '闯关完成！', `总题数：${answerRecord.total}题\n答对题数：${answerRecord.correct}题\n正确率：${accuracy}%`);
+        });
+    };
+
+    // 新增：动态生成左侧题号导航
+    function generateQuestionNav() {
+        const navList = document.getElementById('navList');
+        navList.innerHTML = ''; // 清空原有内容
+
+        for (let i = 0; i < allQuestionCards.length; i++) {
+            const navItem = document.createElement('a');
+            navItem.className = 'nav-item';
+            navItem.dataset.index = i;
+            navItem.innerText = i + 1;
+
+            // 绑定题号点击跳转事件
+            navItem.addEventListener('click', function() {
+                const targetIndex = parseInt(this.dataset.index);
+                goToSpecificQuestion(targetIndex);
+            });
+
+            navList.appendChild(navItem);
+            allNavItems.push(navItem);
+        }
+    }
+
+    // 新增：跳转到指定题号
+    function goToSpecificQuestion(targetIndex) {
+        if (targetIndex < 0 || targetIndex >= allQuestionCards.length) return;
+
+        // 隐藏当前题
+        allQuestionCards[currentQuestionIndex].classList.remove('active');
+        allNavItems[currentQuestionIndex].classList.remove('active');
+
+        // 更新当前索引
+        currentQuestionIndex = targetIndex;
+
+        // 显示目标题
+        showCurrentQuestion();
+
+        // 更新侧边按钮状态
+        updateSidebarBtnStatus();
+    }
+
+    // 新增：跳转到上一题
+    function goToPrevQuestion() {
+        if (currentQuestionIndex > 0) {
+            goToSpecificQuestion(currentQuestionIndex - 1);
+        }
+    }
+
+    // 新增：跳转到下一题
+    function goToNextQuestion() {
+        if (currentQuestionIndex < allQuestionCards.length - 1) {
+            goToSpecificQuestion(currentQuestionIndex + 1);
+            // 隐藏底部下一题按钮
+            document.getElementById('nextBtn').style.display = 'none';
+        }
+    }
+
+    // 新增：更新侧边按钮启用/禁用状态
+    function updateSidebarBtnStatus() {
+        // 上一题按钮：第一题禁用，其余启用
+        if (currentQuestionIndex === 0) {
+            prevBtn.classList.remove('enabled');
+        } else {
+            prevBtn.classList.add('enabled');
+        }
+
+        // 下一题按钮：最后一题禁用，其余启用
+        if (currentQuestionIndex === allQuestionCards.length - 1) {
+            sidebarNextBtn.classList.remove('enabled');
+        } else {
+            sidebarNextBtn.classList.add('enabled');
+        }
+    }
+
+    // 辅助函数1：显示当前题目并更新进度、导航激活状态
+    function showCurrentQuestion() {
+        if (allQuestionCards[currentQuestionIndex] && allNavItems[currentQuestionIndex]) {
+            // 激活当前题目
+            allQuestionCards[currentQuestionIndex].classList.add('active');
+            // 激活当前导航题号
+            allNavItems[currentQuestionIndex].classList.add('active');
+            // 更新答题进度提示
+            document.getElementById('questionProgress').innerText = 
+                `当前：第${currentQuestionIndex + 1}题 / 共${answerRecord.total}题`;
+        }
+    }
+
+    // 辅助函数2：显示自定义提示框
+    function showCustomTip(type, title, content) {
+        const tipTitle = document.getElementById('tipTitle');
+        const tipContent = document.getElementById('tipContent');
+
+        // 重置提示框样式
+        customTip.className = 'custom-tip';
+        customTip.classList.add(`${type}-tip`);
+
+        // 填充内容
+        tipTitle.innerText = title;
+        tipContent.innerText = content;
+
+        // 显示提示框
+        customTip.style.display = 'block';
+    }
+
+    // 辅助函数3：高亮显示正确/错误选项
+    function highlightOption(questionCard, correctAnswer, userAnswer) {
+        const optionItems = questionCard.querySelectorAll('.option-item');
+        optionItems.forEach(item => {
+            const input = item.querySelector('input');
+            if (input.value === correctAnswer) {
+                // 正确选项高亮
+                item.classList.add('correct');
+            } else if (input.value === userAnswer && userAnswer !== correctAnswer) {
+                // 错误选项标记
+                item.classList.add('incorrect');
+            }
+        });
+    }
+</script>
+</html>
